@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>账号注册</title>
+    <script src="/assets/js/jquery-2.2.1.min.js"></script>
+
+    <script>
+        function register() {
+            var account = $("#account").val();
+            var password = $("#password").val();
+            var rePassword = $("#rePassword").val();
+            var email = $("#email").val();
+            var nickname=$("#nickname").val();
+            var phone=$("#phone").val();
+
+            if (Number(password) == Number(rePassword)){
+                $.post("/account/register",
+                    {
+                        account:account,
+                        password:password,
+                        rePassword:rePassword,
+                        email:email,
+                        nickname:nickname,
+                        phone:phone
+                    },function (res) {
+                        if (res ==true){
+                            alert("注册成功");
+                            window.location.href ="/account/login";
+                        } else {
+                            alert("注册失败，请检查数据重试");
+                        }
+                    })
+            }else {
+                alert("两次密码不一致！");
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+<h2>账号注册</h2>
+请输入姓名：<input type="text" id="account"/><br><br>
+请输入密码：<input type="password" id="password" placeholder="仅支持整数" /><br><br>
+请确认密码：<input type="password" id="rePassword" placeholder="仅支持整数"/><br><br>
+请确认邮箱：<input type="email" id="email" placeholder="邮箱"/><br><br>
+请输入昵称：<input type="text" id="nickname" placeholder="昵称"/><br><br>
+请输入电话：<input type="text" id="Phone" placeholder="手机"/><br><br>
+<!--请选择角色：<select id="job" style="width: 173px">-->
+<!--<option value="管理员">管理员</option>-->
+<!--</select><br><br>-->
+<button onclick="register()">注册</button>
+</body>
+
+</html>

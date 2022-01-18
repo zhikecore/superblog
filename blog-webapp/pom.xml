@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<!--<parent>-->
+	<!--<groupId>org.springframework.boot</groupId>-->
+	<!--<artifactId>spring-boot-starter-parent</artifactId>-->
+	<!--<version>2.4.0</version>-->
+	<!--</parent>-->
+
+	<!--声明父工程-->
+	<parent>
+		<groupId>com.zhike</groupId>
+		<artifactId>super-blog</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.zhike</groupId>
+	<artifactId>blog-webapp</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>blog-webapp</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- 添加 blog-service 的依赖 -->
+		<dependency>
+			<groupId>com.zhike</groupId>
+			<artifactId>blog-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<!-- 添加 blog-manager 的依赖 -->
+		<dependency>
+			<groupId>com.zhike</groupId>
+			<artifactId>blog-manager</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!--Tool类-->
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+		<!-- hot swapping, disable cache for template, enable live reload -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>nz.net.ultraq.thymeleaf</groupId>
+			<artifactId>thymeleaf-layout-dialect</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+
+	</dependencies>
+
+	<!--打包方式1-->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<!--打包方式2:
+    ​ 项目打包时会在target目录生成lib依赖包跟项目jar包，部署时将项目 jar 包以及 lib 文件夹上传到服务器上，使用java -jar 命令启动即可。
+    如果后续仅仅修改了项目代码，只需上传替换项目 jar 包。
+    for more details:https://www.cnblogs.com/codhome/p/13763437.html)
+    -->
+	<!--<build>-->
+	<!--<plugins>-->
+	<!--&lt;!&ndash; 指定启动类，将依赖打成外部jar包 &ndash;&gt;-->
+	<!--<plugin>-->
+	<!--<groupId>org.apache.maven.plugins</groupId>-->
+	<!--<artifactId>maven-jar-plugin</artifactId>-->
+	<!--<configuration>-->
+	<!--<archive>-->
+	<!--&lt;!&ndash; 生成的jar中，不要包含pom.xml和pom.properties这两个文件 &ndash;&gt;-->
+	<!--<addMavenDescriptor>false</addMavenDescriptor>-->
+	<!--<manifest>-->
+	<!--&lt;!&ndash; 是否要把第三方jar加入到类构建路径 &ndash;&gt;-->
+	<!--<addClasspath>true</addClasspath>-->
+	<!--&lt;!&ndash; 外部依赖jar包的最终位置 &ndash;&gt;-->
+	<!--<classpathPrefix>lib/</classpathPrefix>-->
+	<!--&lt;!&ndash; 项目启动类 &ndash;&gt;-->
+	<!--<mainClass>com.zhike.blogwebapi.BlogWebapiApplication</mainClass>-->
+	<!--</manifest>-->
+	<!--</archive>-->
+	<!--</configuration>-->
+	<!--</plugin>-->
+	<!--&lt;!&ndash;拷贝依赖到jar外面的lib目录&ndash;&gt;-->
+	<!--<plugin>-->
+	<!--<groupId>org.apache.maven.plugins</groupId>-->
+	<!--<artifactId>maven-dependency-plugin</artifactId>-->
+	<!--<executions>-->
+	<!--<execution>-->
+	<!--<id>copy-lib</id>-->
+	<!--<phase>package</phase>-->
+	<!--<goals>-->
+	<!--<goal>copy-dependencies</goal>-->
+	<!--</goals>-->
+	<!--<configuration>-->
+	<!--<outputDirectory>target/lib</outputDirectory>-->
+	<!--<excludeTransitive>false</excludeTransitive>-->
+	<!--<stripVersion>false</stripVersion>-->
+	<!--<includeScope>runtime</includeScope>-->
+	<!--</configuration>-->
+	<!--</execution>-->
+	<!--</executions>-->
+	<!--</plugin>-->
+	<!--</plugins>-->
+	<!--</build>-->
+</project>

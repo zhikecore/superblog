@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>JeffreyHu's Blog</title>
+<head>
+
+    <!-- 不使用 CDN-->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
+    <link href="/assets/css/prism.css" rel="stylesheet" />
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet" />
+
+    <script src="/assets/js/jquery-2.2.1.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.goup.min.js"></script>
+    <script src="/assets/js/prism.js"></script>
+    <script src="/assets/js/app.js"></script>
+
+    <!--jquery tmpl-->
+    <!--<script src="/scripts/jquery.tmpl.js"></script>-->
+    <!--<script src="/scripts/helper.js"></script>-->
+
+    <style type="text/css">
+        .user-info {
+            max-width: 100px;
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            text-align: left;
+            vertical-align: top;
+            line-height: 15px;
+            position: relative;
+            top: 6px;
+            color: white;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://www.romejs.cn/fonts/fonts.css">
+    <link href="/assets/css/footer.css" rel="stylesheet" />
+</head>
+
+<body class="no-skin">
+
+<div th:include="layout/header :: common_header"></div>
+
+<!--重点部分-->
+<div layout:fragment="content" class="container" style="min-height: 600px;margin-bottom: 10px;"></div>
+
+<div th:include="layout/footer :: footer"></div>
+
+</body>
+</html>

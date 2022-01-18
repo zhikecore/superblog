@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="layout/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        #secondary p {
+            word-break: normal;
+            white-space: pre-warp;
+            word-wrapL: break-word;
+        }
+
+        #secondary .list-group-item {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: inherit;
+        }
+    </style>
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 400px;
+        }
+
+        #img_news img {
+            cursor: pointer;
+            transition: all 0.6s;
+        }
+
+        #img_news img:hover {
+            transform: scale(1.1);
+        }
+
+        .img_scale {
+            width: 100%;
+            height: 195px;
+            overflow: hidden;
+        }
+
+        .module-head {
+            color: #222;
+            padding: 0;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    </style>
+
+    <style>
+        .page-item {
+            padding: 1px 5px;
+            border: 1px solid #afafaf;
+            margin-left: 3px
+        }
+
+        .page-item.active {
+            color: red;
+            border: 1px solid red;
+        }
+    </style>
+
+    <!--<script type="text/javascript">-->
+    <!--function clickFrm(pageNum) {-->
+
+    <!--//alert(pageNum);-->
+    <!--//末页判断-->
+    <!--if(pageNum>[[${page?.total}]]){-->
+    <!--pageNum=[[${page?.total}]];-->
+    <!--}-->
+    <!--$("#pageNum").val(pageNum);-->
+    <!--$("#pageFrm").submit();-->
+    <!--}-->
+    <!--</script>-->
+
+</head>
+
+<body>
+
+<div layout:fragment="content" >
+
+    <div class="page-content">
+
+        <div class="page-content-area">
+
+            <!--<div class="row">-->
+                <!--<div class="col-md-12 col-xs-12">-->
+                    <!--<a th:href="@{/default/export}" class="btn btn-info" th:value="导出excel">导出</a>-->
+                <!--</div>-->
+
+            <!--</div>-->
+
+            <h1 id="-" class="center">投稿规则</h1>
+            <p><strong>©智客工坊</strong></p>
+            <p><br /></p>
+            <p>
+                <section>
+                    <a href="https://img.zhikestreet.com/投稿指南.png?imageView2/0/q/75|watermark/2/text/NTJJbnRlcnZpZXc=/font/5a6L5L2T/fontsize/240/fill/IzBFMDkwNQ==/dissolve/100/gravity/SouthEast/dx/10/dy/10" data-lightbox="example-set"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://img.zhikestreet.com/投稿指南.png?imageView2/0/q/75|watermark/2/text/NTJJbnRlcnZpZXc=/font/5a6L5L2T/fontsize/240/fill/IzBFMDkwNQ==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt=""></a>
+                </section>
+                <br />
+            </p>
+            <p>&#160; &#160;&#160;&#160;<strong>智客工坊</strong>,致力于为受众持续提供高质量内容。为此,需要扩大内容来源和渠道。</p>
+            <p>&#160; &#160;&#160;&#160;投稿规则如下:</p>
+            <ul>
+                <li>
+                    <p>主题范围:</p>
+                    <ul>
+                        <li>项目管理 &amp; 文档设计、技术架构 &amp; 中间件、编程语言 &amp; 开发技巧、数据结构 &amp; 算法、大数据 &amp; 数据存储、运维 &amp; 安全、产品 &amp; UI设计、工具 &amp; 开源项目、插件 &amp; 框架</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>素材形式:</p>
+                    <ul>
+                        <li>原创图片和文章</li>
+                        <li>单张图片不能超过2M</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>素材内容规范:</p>
+                    <ul>
+                        <li>图片无水印,无违反国家法律内容</li>
+                        <li>文章,思路清晰,无违反国家法律内容</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>素材类型</p>
+                    <ul>
+                        <li>文章(参考:<a href="https://www.52interview.com/solution/index">问呗</a>)</li>
+                        <li>系列教程(参考:<a href="https://www.52interview.com/book/list">教程</a>)</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>投稿,尊重作者原创,<strong>智客工坊</strong>会保留作者署名,且免费向读者开放。</p>
+                </li>
+                <li>
+                    投稿方式<ul>
+                    <li>发送至邮箱:zhikecore@foxmail.com</li>
+                </ul>
+                </li>
+            </ul>
+            <hr>
+            <h2 id="-">说明</h2>
+            <p>&#160; &#160;&#160;&#160;以上规则最终解释权归<strong>智客工坊</strong>。</p>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

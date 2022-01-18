@@ -1,0 +1,45 @@
+﻿@charset "UTF-8";
+.jdc-side { display: none; position: fixed; right: 20px; bottom: 20px; z-index: 300; width: 60px }
+.mod_hang_qrcode { position: relative }
+.mod-qr-tips { height: 70px; background: url(../images/qrtips.png) center no-repeat; background-size: 100% }
+.mod_hang_qrcode_show { display: none; position: absolute; right: 70px; top: -65px; width: 138px; min-height: 166px; border: 0 none; background: #fff; -webkit-box-shadow: 0 0 10px 0 rgba(20,34,67,.1); -moz-box-shadow: 0 0 10px 0 rgba(20,34,67,.1); box-shadow: 0 0 10px 0 rgba(20,34,67,.1) }
+.mod_hang_qrcode_show p { margin-top: 5px; line-height: 16px; color: #666; font-size: 12px; text-align: center }
+.mod_hang_qrcode_show_bg { width: 124px; height: 124px; margin: 8px auto 0; background-position: 0 0; background-repeat: no-repeat; -moz-background-size: 124px auto; background-size: 124px auto; background-image: url(../images/qrcode.png) }
+.jdc_hang_qrcode .mod_hang_qrcode_show_bg { background-image: url(../images/qrcode.jpg) }
+.jdc_hang_qrcode p { padding-bottom: 5px }
+.mod_hang_qrcode_btn { display: block; width: 60px; height: 60px; color: #0989c5; font-size: 40px; cursor: pointer; -webkit-transition: all .25s ease; -moz-transition: all .25s ease; transition: all .25s ease }
+.mod_hang_top { display: block; width: 60px; height: 60px; margin: 5px 0 0; text-align: center; cursor: pointer; -webkit-transition: all .25s ease; -moz-transition: all .25s ease; transition: all .25s ease; background-color: transparent }
+.mod_hang_qrcode:hover .mod_hang_qrcode_show { display: block }
+.mod_hang_qrcode_btn { position: relative; margin-top: 5px; text-align: center; background-color: transparent; -webkit-box-shadow: 0 0 10px 0 rgba(20,34,67,.1); -moz-box-shadow: 0 0 10px 0 rgba(20,34,67,.1); box-shadow: 0 0 10px 0 rgba(20,34,67,.1) }
+.mod_hang_qrcode_btn span { display: none; position: absolute; top: 25px; left: 25px; width: 30px; line-height: 15px; font-size: 12px; text-align: center }
+.mod_hang_qrcode_btn:hover { color: #fff }
+.mod_hang_top { -webkit-box-shadow: 0 0 10px 0 rgba(20,34,67,.1); -moz-box-shadow: 0 0 10px 0 rgba(20,34,67,.1); box-shadow: 0 0 10px 0 rgba(20,34,67,.1) }
+.mod_hang_top .mod_hang_qrcode_btn { background: 0 0; margin: 0 }
+.mod_hang_appeal_btn { display: block; width: 60px; height: 60px; color: #0989c5; text-align: center; font-size: 20px; cursor: pointer; -webkit-box-shadow: 0 0 10px 0 rgba(20,34,67,.1); -moz-box-shadow: 0 0 10px 0 rgba(20,34,67,.1); box-shadow: 0 0 10px 0 rgba(20,34,67,.1) ;}
+
+.mod_hang_appeal:hover .mod_hang_appeal_show{ display:block;opacity: 1;}
+
+
+.mod_hang_appeal_btn i, .mod_hang_qrcode_btn i { display: inline-block; width: 60px; height: 60px; line-height: 60px; font-size: 40px; color: #0989c5; background-color: #fff }
+.mod_hang_appeal_btn span { display: none; position: absolute; top: 25px; left: 25px; width: 30px; line-height: 15px; font-size: 12px; text-align: center }
+.mod_hang_appeal.show .mod_hang_appeal_show { display: block }
+.mod_hang_appeal_show { opacity: 0; z-index:-9; right:-500px; position: absolute; right: 70px; bottom: 0; background: #fff; -webkit-box-shadow: 0 0 10px 0 rgba(20,34,67,.1); -moz-box-shadow: 0 0 10px 0 rgba(20,34,67,.1); box-shadow: 0 0 10px 0 rgba(20,34,67,.1); width: 300px }
+.mod_hang_appeal_show li {
+*zoom:1; cursor: pointer }
+.mod_hang_appeal_show li:hover { background: #f3f5fb }
+.mod_hang_appeal_show li:after, .mod_hang_appeal_show li:before { content: ""; display: block; clear: both; height: 0; line-height: 0; visibility: hidden }
+.mod_hang_appeal_show .icon_box, .mod_hang_appeal_show .text_box { float: left; width: 215px; height: 90px; cursor: pointer }
+.mod_hang_appeal_show .icon_box { width: 78px; line-height: 90px; text-align: center }
+.mod_hang_appeal_show .icon_box i { color: #0989c5; font-size: 30px }
+.mod_hang_appeal_show .text_box h5 { margin-top: 10px; font-size: 16px; color: #03004c; line-height: 24px; cursor: pointer; white-space: nowrap; text-overflow: ellipsis; overflow: hidden }
+.mod_hang_appeal_show .text_box p { margin-top: 10px; max-height: 36px; overflow: hidden; line-height: 18px; font-size: 12px; color: #666; cursor: pointer }
+.jdc_feedback_qrcode .mod_hang_qrcode_btn { margin-bottom: 5px }
+.jdc_feedback_qrcode .mod_hang_qrcode_show { min-height: 226px }
+.jdc_feedback_qrcode .mod_hang_qrcode_show p { padding-bottom: 5px }
+.jdc_feedback_qrcode .mod_hang_qrcode_show_bg { margin-top: 0; background-image: none }
+@media (max-width:768px) {
+.jdc-rwd .jdc-side { display: none!important }
+}
+.jdc-lang-en .jdc_hang_qrcode .mod_hang_qrcode_show_bg { background-image: url(../images/qrcode-en.jpg) }
+.jdc-lang-en .mod-qr-tips { position: relative }
+.jdc-lang-en .mod-qr-tips:after { content: "Search"; position: absolute; left: 41px; top: 8px; width: 85px; height: 30px; line-height: 30px; background: #fff; color: #666; font-size: 16px }

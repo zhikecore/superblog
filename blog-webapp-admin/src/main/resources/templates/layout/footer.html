@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="layout/layout">
+<meta charset="UTF-8">
+<!-- 通过自有函数输出HTML头部信息 -->
+<meta name="description" content="智客坊">
+<meta name="keywords" content="互联网,大数据,C#,blog,hadoop,elasticsearch">
+
+<body>
+
+<!--<footer class="navbar-fixed-bottom" th:fragment="footer">-->
+
+    <!--<div class="container">-->
+        <!--<div class="row" style="text-align: center;">-->
+            <!--<div class="col-sm-3 col-md-3 col-lg-3">-->
+                <!--<a href="#" style=" color: gray;">关于我们</a>-->
+            <!--</div>-->
+            <!--<div class="col-sm-3 col-md-3 col-lg-3">-->
+                <!--<a href="#" style=" color: gray;">联系方式</a></li>-->
+            <!--</div>-->
+            <!--<div class="col-sm-3 col-md-3 col-lg-3">-->
+                <!--<a href="#" style=" color: gray;">旗下网站</a></li>-->
+            <!--</div>-->
+            <!--<div class="col-sm-3 col-md-3 col-lg-3">-->
+                <!--<a href="#" style=" color: gray;">特别致谢</a></li>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</footer>-->
+
+<style type="text/css">
+
+    .footer .footer-inner .footer-content {
+        position: absolute;
+        left: 12px;
+        right: 12px;
+        bottom: 4px;
+        padding: 8px;
+        line-height: 22px;
+        border-top: 3px double #E5E5E5;
+    }
+</style>
+<div class="space-20"></div>
+
+<div th:fragment="footer" id="footerdiv">
+
+    <div class="footer">
+        <div class="footer-inner">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="row">
+                        声明:本站部分文章来源于网友提供,如侵犯到您的权利,请<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=bhQGBwULDQEcCy4IARYDDwcCQA0BAw" target="_blank">联系站长</a>,站长核实后会第一时间移除！
+                    </div>
+                    <div class="row">
+                        &copy; 2019-2020 <span class="black bolder">52interview.com </span> 保留所有权利.
+                        <a href="http://www.beian.miit.gov.cn" target="_blank" class="text-secondary">蜀ICP备18033910号-2</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>>
+
+
+

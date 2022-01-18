@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="layout/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        #secondary p {
+            word-break: normal;
+            white-space: pre-warp;
+            word-wrapL: break-word;
+        }
+
+        #secondary .list-group-item {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: inherit;
+        }
+    </style>
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 400px;
+        }
+
+        #img_news img {
+            cursor: pointer;
+            transition: all 0.6s;
+        }
+
+        #img_news img:hover {
+            transform: scale(1.1);
+        }
+
+        .img_scale {
+            width: 100%;
+            height: 195px;
+            overflow: hidden;
+        }
+
+        .module-head {
+            color: #222;
+            padding: 0;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    </style>
+
+    <style>
+        .page-item {
+            padding: 1px 5px;
+            border: 1px solid #afafaf;
+            margin-left: 3px
+        }
+
+        .page-item.active {
+            color: red;
+            border: 1px solid red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div layout:fragment="content" >
+
+    <div class="page-content">
+
+        <div class="page-content-area">
+
+            <!--轮播图-->
+            <div class="row" role="main">
+                <div class="col-md-12">
+                    <div id="demo" class="carousel slide post-wrapper" data-ride="carousel">
+                        <!-- 指示符 -->
+                        <ul class="carousel-indicators">
+                            <li data-target="#demo" data-slide-to="0" class=""></li>
+                            <li data-target="#demo" data-slide-to="1" class="active"></li>
+                            <li data-target="#demo" data-slide-to="2"></li>
+                        </ul>
+
+                        <!-- 轮播图片 -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item">
+                                <a href="http://www.zhikestreet.com/content/p/8.html"><img src="http://pepper.img.zhikestreet.com/%E6%A0%BC%E5%B1%80.png"></a>
+
+                                <div class="carousel-caption">
+                                    <h3>小团队,也要有大格局</h3>
+                                    <p>每年都会有大批的新人从高校毕业,进入职场,开启他(她)们的职业生涯。掐指一算,我已混迹职场七年有余。“铁打的营盘，流水的兵”,职来职往,我见过不少新面孔的到来,然后也有不断离去,进入其他职场的身影。或许,这就是生活,而这一幅幅画面,连在起来正好解释了什么是"奔波"。</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item active">
+                                <a href="https://www.36kr.com/p/5163832"><img src="http://pepper.img.zhikestreet.com/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4.png"></a>
+
+                                <div class="carousel-caption">
+                                    <h3>张勇发全员公开信：天猫升级为“大天猫”，CTO行癫兼任阿里云智能总裁</h3>
+                                    <p>阿里要为未来5年到10年的发展奠定组织基础和领导力量。</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="http://tech.163.com/18/1127/17/E1KRMHG100097U7R.html"><img src="http://pepper.img.zhikestreet.com/%E7%9B%9B%E6%B3%B0%E5%B8%8C.png"></a>
+
+                                <div class="carousel-caption">
+                                    <h3>盛希泰全员信：优秀的企业都在冬天谋篇布局和跨越</h3>
+                                    <p>洪泰基金成立四周年之际，洪泰基金创始人盛希泰发表全员信，在文中对时下热门话题如投资行业进入冬天、机构如何过冬发表了自己的观点。</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="https://tech.sina.com.cn/it/2018-12-03/doc-ihprknvs8078949.shtml"><img src="http://pepper.img.zhikestreet.com/%E5%9B%BD%E4%BA%A7%E8%8A%AF%E7%89%8720181204.png"></a>
+
+
+                                <div class="carousel-caption">
+                                    <h3>经济日报：国产芯片要白菜化？别被自嗨文带沟里了</h3>
+                                    <p>这两天，小编被几篇微信公众号文章整得有点小激动。光看文章标题这架势，仿佛咱分分钟就能造出高端芯片了，再也不怕“卡脖子”了。多么令人扬眉吐气！</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="http://www.zhikestreet.com/content/p/19.html"><img src="http://pepper.img.zhikestreet.com/%E6%8A%95%E7%A8%BF%E6%8C%87%E5%8D%97.png"></a>
+
+                                <div class="carousel-caption">
+                                    <h3>智客坊征稿公告</h3>
+                                    <p>智客坊,致力于为受众持续提供高质量内容。
+                                        为此,面向广大才俊有偿征集素材,欢迎各位大家踊跃投稿！
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 左右切换按钮 -->
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <form class="form-inline my-2 my-lg-0" method="get" action="/default/index">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="title" th:value="${article.title}">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+                        <hr/>
+                    </form>
+                    <a th:href="@{/default/export}" class="btn btn-info" th:value="导出excel">导出</a>
+                </div><!-- end #main-->
+
+            </div>
+
+            <div class="row mt-3"></div>
+
+            <div class="row">
+                <div class="col-md-8 col-xs-12 " id="main" role="main">
+                    <div id="list_articles">
+                        <article class="post-wrapper" itemscope="" th:each="article:${page?.records}">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        <a class="title-link" itemprop="url" th:title="${article.Title}" th:href="'/article/detail/'+${article.getId()}"  th:text="${article.Title}"></a>
+                                    </h3>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="post-content" itemprop="articleBody" th:value="${article.Summary}">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 post-meta">
+                                    <ul class="">
+                                        <li>时间： <time th:datetime="${article.CreateTime}" itemprop="datePublished" th:value="${article.CreateTime}"></time>
+                                        </li>
+                                        <li itemprop="author" itemscope="" itemtype="#">作者： <a itemprop="name" href="#" rel="author">麦子</a></li>
+                                        <li>分类： <a href="#">.NET</a></li>
+                                        <li itemprop="interactionCount"><a itemprop="discussionUrl" href="#" title="浏览"><i class="icon-eye-open" th:text="${article.ScanNum}"></i> </a></li>
+                                        <li itemprop="interactionCount"><a itemprop="discussionUrl" href="#" title="赞"><i class="icon-thumbs-up" th:text="${article.LikeNum}"></i></a></li>
+                                        <li itemprop="interactionCount"><a itemprop="discussionUrl" href="#" title="评论"><i class="icon-comment" th:text="${article.CommentNum}"></i></a></li>
+                                        <li class="float-right"><a th:href="${article.LinkUrl}" class="float-right">阅读全文</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                    <!--将分页的页面包含-->
+                    <!--<div th:replace="article/pagination :: page"></div>-->
+
+                    <div style="float: left" th:if="${page.pages>0}">
+                        当前第<span th:text="${page.current}"></span>页,共<span
+                            th:text="${page.pages}"></span>页,总记录数<span th:text="${page.total}"></span>
+                    </div>
+                    <div style="float: right" th:if="${page.pages>0}">
+                        <a th:href="'/default/index?pageNum=1'" th:text="首页" th:if="${page.current>1}" th:class="page-item"></a>
+                        <a th:href="'/default/index?pageNum=' + ${page?.current-1}" th:text="上一页" th:class="page-item"
+                           th:if="${page.current>1}"></a>
+
+                        <a th:href="'/default/index?pageNum=' + ${i}"
+                           th:each="i :${#numbers.sequence(1, page.pages)}" th:text="${i}"
+                           th:class="${page.current == i}? 'page-item active' :'page-item' "></a>
+
+                        <a th:href="'/default/index?pageNum=' +(${page.current+1})" th:text="下一页" th:class="page-item"
+                           th:if="${page.current<page.pages}"></a>
+
+                        <a th:href="'/default/index?pageNum=' + ${page.pages}" th:class="page-item"
+                           th:if="${page.current<page.pages}">尾页</a>
+                    </div>
+
+
+                </div><!-- end #main-->
+                <div class="col-md-4 kit-hidden-tb" id="secondary" role="complementary">
+
+                    <!-- 边栏显示最近文章，默认注释掉 -->
+                    <!-- 边栏显示最近回复，默认开启 -->
+                    <section class="widget">
+                        <div class="module-head">24小时商业热点</div>
+                        <ul class="list-group">
+                            <li class="list-group-item comment-item">
+                                <div class="row">
+                                    <div class="col-md-4 ">
+                                        <a href="https://mp.weixin.qq.com/s/kTFDKVSYpfW7Tem2aswFNw">
+                                            <img src="http://pepper.img.zhikestreet.com/%E7%8C%8E%E8%B1%B9%E7%A7%BB%E5%8A%A8.png" alt="文章缩略图" class="post-thumb-image img-thumbnail">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <a href="https://mp.weixin.qq.com/s/kTFDKVSYpfW7Tem2aswFNw">
+                                            <div class="post-content" itemprop="articleBody">
+                                                <p>傅盛：创业八年，行业都消失了，我们还在增长</p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="list-group-item comment-item">
+                                <div class="row">
+                                    <div class="col-md-4 ">
+                                        <a href="http://www.zhikestreet.com/content/p/29.html">
+                                            <img src="http://pepper.img.zhikestreet.com/swaggerUI.png" alt="文章缩略图" class="post-thumb-image img-thumbnail">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <a href="http://www.zhikestreet.com/content/p/29.html">
+                                            <div class="post-content" itemprop="articleBody">
+                                                <p>ASP.NET Core Web API中使用Swagger</p>
+                                            </div>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+
+                </div><!-- end #sidebar -->
+                <a class="to-top" style="z-index: 1200; cursor: pointer; position: fixed; right: 15px; bottom: 30px; display: none;">
+                    <img src="/assets/img/top.svg" alt="返回顶部" title="返回顶部">
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

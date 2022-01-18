@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="layout/layout">
+
+<div layout:fragment="content">
+
+    <!-- #section:basics/content.breadcrumbs -->
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                <i class="ace-icon fa fa-home home-icon"></i>
+                <a href="#">主页</a>
+            </li>
+
+            <li>
+                <a href="#">用户管理</a>
+            </li>
+            <li class="active">列表</li>
+        </ul><!-- /.breadcrumb -->
+
+        <!-- #section:basics/content.searchbox -->
+        <!--<div class="nav-search" id="nav-search">-->
+            <!--<form class="form-search">-->
+							<!--<span class="input-icon">-->
+								<!--<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />-->
+								<!--<i class="ace-icon fa fa-search nav-search-icon"></i>-->
+							<!--</span>-->
+            <!--</form>-->
+        <!--</div>&lt;!&ndash; /.nav-search &ndash;&gt;-->
+
+        <!-- /section:basics/content.searchbox -->
+    </div>
+
+    <!--tables-->
+    <div class="space-10"></div>
+    <div class="page-content">
+        <div class="page-content-area">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="table-header">
+                        用户管理
+                    </div>
+                    <div class="space-10"></div>
+                    <!--查询布局-->
+                    <form class="aceform">
+                        <label for="Account">账号</label>
+                        <input type="text" id="Account" placeholder="账户">
+
+                        <button type="button" id="btnSearch" class="btn btn-sm btn-primary acefromSearchBtn pull-right">
+                            <span class="bigger-110">搜索</span>
+
+                            <i class="ace-icon fa fa-search icon-on-right"></i>
+                        </button>
+
+                    </form>
+                    <div class="space-20"></div>
+                    <!-- <div class="table-responsive"> -->
+                    <!-- <div class="dataTables_borderWrap"> -->
+                    <div>
+                        <table id="user_datatable" class="table table-striped table-bordered table-hover"></table>
+                        <!--<table id="example" class="display table-striped table-bordered table-hover table-condensed" cellspacing="0" width="100%">-->
+                            <!--<thead>-->
+                            <!--<tr>-->
+                                <!--<th>编号</th>-->
+                                <!--<th>姓名</th>-->
+                                <!--<th>账户</th>-->
+                                <!--<th>操作</th>-->
+                            <!--</tr>-->
+                            <!--</thead>-->
+                        <!--</table>-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- inline scripts related to this page -->
+    <script type="text/javascript">
+        jQuery(function ($) {
+
+            //table
+            var oTable = null;
+            window.onload = function () {
+                //code
+                oTable = $("#user_datatable").dataTable({
+                    aoColumns: [
+                        { mData: 'id', sTitle: "ID", sWidth: '20%' },
+                        { mData: 'account', sTitle: "账户", sWidth: '30%' },
+                        { mData: 'phone', sTitle: "手机号码", sWidth: '50%' },
+                        // {
+                        //     mData: 'Description', sTitle: "描述", sWidth: '40%', mRender: function (data, type, row) {
+                        //         //var identityReason = row.IdentityReason;
+                        //         var roleName = row.RoleName;
+                        //         var shortdata = '';
+                        //         if (row.Description.length > 8)
+                        //             shortdata = row.Description.substr(0, 8) + '...';
+                        //         else
+                        //             shortdata = row.Description;
+                        //         if (row.Identity == 'True') {
+                        //             return '<span class="label label-sm label-info arrowed-right arrowed-in">' + roleName + '</span><span class="label label-sm label-success arrowed-right arrowed-in">认证通过</span>' + '<a class="auto_div" style="text-decoration:none;color:black;" data-original-title="' + shortdata + '" data-placement="bottom" data-rel="tooltip">' + row.Description + '</a>';
+                        //         } else {
+                        //             return '<span class="label label-sm label-info arrowed-right arrowed-in">' + roleName + '</span><span class="label label-sm label-warning arrowed-right arrowed-in">未认证</span>' + '<a class="auto_div" style="text-decoration:none;color:black;" data-original-title="' + shortdata + '" data-placement="bottom" data-rel="tooltip">' + row.Description + '</a>';
+                        //         }
+                        //
+                        //     }
+                        // },
+                        //{ mData: "Actions", sTitle: "操作", bSortable: false, sWidth: "15%" }
+                    ],
+                    fnServerData: function (sUrl, aoData, fnCallback, oSettings) {
+
+
+                        aoData.push(
+                            { "name": "Keyword", "value": $("#Account").val() }
+                        );
+                        return oSettings.jqXHR = $.ajax({
+                            //url: '/User/GetDataTableRecords',
+                            url:'/user/query',
+                            data: aoData,
+                            type: 'GET',
+                            dataType: 'json',
+                            success: fnCallback,
+                            cache: true
+                        });
+
+                    },
+                    bStateSave: true,
+                    fnRowCallback: function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+
+                        // Row click
+                        $(nRow).on('dblclick', function () {
+
+                            var url = '#';
+                            switch (aData.TicketField) {
+                                case '0':
+                                    url = '/admins/ticket/detail/' + aData.Id;
+                                    break;
+                                case '1':
+                                    url = '/admins/SarmTicket/detail/' + aData.Id;
+                                    break;
+                                case '2':
+                                    url = '/PanGuChannel/Ticket/Detail/' + aData.Id;
+                                    break;
+                            }
+                            window.location.href = url;
+                        });
+
+                        // Cell click
+                        $('td', nRow).on('click', function () {
+                            console.log('Col Clicked.', this, aData, iDisplayIndex, iDisplayIndexFull);
+                        });
+
+                        //Row Css
+                        var status = aData.Status; // ID is returned by the server as part of the data
+                        var $nRow = $(nRow); // cache the row wrapped up in jQuery
+                        switch (status) {
+                            case "1":
+                                $nRow.css({ "color": "rgb(253, 200, 0)" })
+                                break;
+                            case "2":
+                                $nRow.css({ "color": "blue" })
+                                break;
+                            case "3":
+                                $nRow.css({ "color": "red" })
+                                break;
+                            case "5":
+                                $nRow.css({ "color": "#00BB00" })
+                                break;
+                            case "8":
+                                $nRow.css({ "color": "#996600" })
+                                break;
+                        }
+                        return nRow;
+                    },
+                    iDisplayLength: 20
+                    //sScrollX: '100%'
+                });
+            }
+
+            //查询
+            $('#btnSearch').click(function () {
+                oTable.fnFilter();
+            })
+        })
+
+    </script>
+
+
+
+</div>
+
+
+</html>

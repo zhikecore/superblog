@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="layout/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>文章详情页面</title>
+    <link href="https://img.zhikestreet.com/github-markdown.css" rel="stylesheet" />
+</head>
+
+<body>
+
+<div layout:fragment="content" >
+
+    <div class="page-content">
+
+        <div class="page-content-area">
+
+            <article class="markdown-body">
+              <div th:utext="${article.content}"></div>
+            </article>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

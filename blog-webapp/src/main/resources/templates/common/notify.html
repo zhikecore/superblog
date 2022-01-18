@@ -1,0 +1,168 @@
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="开发者,智客,智客工坊,极客,编程,代码,产品,互联网解决方案,建站,Devops,Developer,Programmer,Coder,Geek" />
+    <meta name="description" content="智客工坊是一个互联网行业解决方案服务平台,旨在为个人和企业提供通用或者定制化的行业解决方案,帮助行业积淀知识,经验,技术方案。
+提供包括技术教程,辅助学习,面试辅导,行业方案咨询等产品。" />
+    <link rel="icon" href="~/assets/avatars/zhike-logo_white.png" type="image/png">
+    <title>JeffreyHu's Blog</title>
+
+    <meta name="description" content="User login page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!--<link rel="stylesheet" href=@Url.Content("~/assets/css/bootstrap.min.css") />-->
+
+    <!--<script src="https://img.zhikestreet.com/jquery-1.11.0.min.js"></script>-->
+
+    <!--<script src="~/assets/js/bootstrap.min.js"></script>-->
+
+    <!-- 不使用 CDN-->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
+    <link href="/assets/css/prism.css" rel="stylesheet" />
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet" />
+
+    <script src="/assets/js/jquery-2.2.1.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.goup.min.js"></script>
+    <script src="/assets/js/prism.js"></script>
+    <script src="/assets/js/app.js"></script>
+
+    <style type="text/css" id="test-sheet">
+        body {
+            padding: 11px;
+            background-color: #FFF;
+        }
+
+        .CodeMirror {
+            height: 500px;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        .CodeMirror-matchingtag {
+            background: rgba(255, 150, 0, .3);
+        }
+
+        .CodeMirror {
+            border: 1px solid silver;
+        }
+
+        .CodeMirror-empty.CodeMirror-focused {
+            outline: none;
+        }
+
+        .CodeMirror pre.CodeMirror-placeholder {
+            color: #999;
+        }
+
+        .option-group .list-group-item {
+            position: relative;
+        }
+
+        .option-group .list-group-item input[type=text] {
+            position: absolute;
+            left: 6px;
+            right: 6px;
+            top: 4px;
+            bottom: 4px;
+            opacity: 0;
+            padding-left: 8px;
+            max-width: 155px;
+            -webkit-transition: opacity 0.15s linear 0s;
+            -moz-transition: -moz-transform 0.15s linear 0s;
+            -o-transition: -o-transform 0.15s linear 0s;
+            transition: transform 0.15s linear 0s;
+        }
+
+        .option-group .list-group-item:hover input[type=text], .option-group .list-group-item input[type=text].active {
+            opacity: 1;
+        }
+
+        ul.spaced > li {
+            margin-bottom: 10px;
+            line-height: 20px;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="pull-left text-left" style="width: 170px; margin: 0 20px;">
+    <a href="email-guide.html" data-toggle="modal" data-target="#help-dialog" class="btn btn-block btn-default" style="margin-bottom: 5px;">
+        <i class="text-primary glyphicon glyphicon-question-sign"></i> Help
+    </a>
+
+    <div id="options" class="option-group list-group">
+        <div class="list-group-item" title="Content width, usually 600px">
+            Width
+            <input type="text" name="option[base-width]" value="600" />
+        </div>
+
+        <div class="list-group-item" title="Body background color">
+            Background Color
+            <input type="text" name="option[body-background]" value="#E4E6E9" />
+        </div>
+
+        <div class="list-group-item" title="Content background color">
+            Content Background
+            <input type="text" name="option[content-background]" value="#FFFFFF" />
+        </div>
+
+        <div class="list-group-item" title="Text color">
+            Text Color
+            <input type="text" name="option[text-color]" value="#444444" />
+        </div>
+
+        <div class="list-group-item" title="Font family">
+            Font Name
+            <input type="text" name="option[font-family]" value="Arial, sans-serif" />
+        </div>
+
+        <div class="list-group-item" title="Font size">
+            Font Size
+            <input type="text" name="option[font-size]" value="13" />
+        </div>
+
+        <div class="list-group-item" title="Horizontal line color">
+            Horizontal Line Color
+            <input type="text" name="option[hr-background]" value="#E8E8E8" />
+        </div>
+
+        <div class="list-group-item" title="Wrap content inside a slightly larger element so that body background is always visible">
+            Content Wrap Size
+            <input type="text" name="option[wrap-size]" value="8" />
+        </div>
+
+        <div class="list-group-item">
+            <label>
+                <input style="vertical-align: top;" type="checkbox" name="option[rtl]" />
+                RTL (right to left)
+            </label>
+        </div>
+
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footer-inner">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                声明:本站部分文章来源于网友提供,如侵犯到您的权利,请<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=bhQGBwULDQEcCy4IARYDDwcCQA0BAw" target="_blank">联系站长</a>,站长核实后会第一时间移除！
+            </div>
+                <div class="row">
+                    &copy; 2019-2020 <span class="black bolder">52interview.com </span> 保留所有权利.
+                    <a href="http://www.beian.miit.gov.cn" target="_blank" class="text-secondary">蜀ICP备18033910号-2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>

@@ -1,0 +1,27 @@
+﻿@charset "UTF-8";
+html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent }
+blockquote, body, button, caption, dd, div, dl, dt, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hr, html, input, legend, li, menu, ol, p, pre, table, td, textarea, th, ul { margin: 0; padding: 0 }
+address, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
+table { border-collapse: collapse; border-spacing: 0 }
+caption, th { text-align: left; font-weight: 400 }
+abbr, body, fieldset, html, iframe, img { border: 0 }
+address, cite, dfn, em, i, var { font-style: normal }
+[hidefocus], summary {
+outline:0
+}
+li { list-style: none }
+h1, h2, h3, h4, h5, h6, small { font-size: 100% }
+sub, sup { font-size: 83% }
+code, kbd, pre, samp { font-family: inherit }
+q:after, q:before { content: none }
+textarea { overflow: auto; resize: none }
+label, summary { cursor: default }
+a, button { cursor: pointer }
+b, em, h1, h2, h3, h4, h5, h6, strong { font-weight: 700 }
+a, a:hover, del, ins, s, u { text-decoration: none }
+body, button, input, keygen, legend, select, textarea { font: 14px/1.5 PingFangSC, 'helvetica neue', 'hiragino sans gb', 'Segoe UI', Calibri, 'microsoft yahei ui', 'microsoft yahei', simsun, sans-serif; color: #333; outline: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale }
+input[type=text] { -webkit-appearance: none; border-radius: 0 }
+
+@font-face { font-family: jdcfont; src: url(../fonts/jdcfont.eot); src: url(../fonts/jdcfont.eot#iefix) format("embedded-opentype"), url(../fonts/jdcfont.woff) format("woff"), url(../fonts/jdcfont.ttf) format("truetype"), url(../fonts/jdcfont.svg#jdcfont) format("svg") }
+.jdcfont { font-family: jdcfont!important; font-size: 16px; font-style: normal; -webkit-font-smoothing: antialiased; -webkit-text-stroke-width: .2px; -moz-osx-font-smoothing: grayscale }
+

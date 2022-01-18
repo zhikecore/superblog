@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="layout/layout">
+<meta charset="UTF-8">
+<!-- 通过自有函数输出HTML头部信息 -->
+<meta name="description" content="智客坊">
+<meta name="keywords" content="互联网,大数据,C#,blog,hadoop,elasticsearch">
+
+<body>
+
+<!--&lt;!&ndash;begin #header-->
+<header th:fragment="common_header" id="header" class="clearfix">
+    <nav class="navbar navbar-expand-md navbar-dark  bg-dark">
+        <a class="navbar-brand" href="/default/index">Superblog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/default/index">首页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/category/index">专题</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/aboutUs/index">关于</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Contribute/Index">投稿</a>
+                </li>
+            </ul>
+
+            <!--获取session中的userName -->
+            <span class="user-info" th:if="${session.aname != null}">
+                <small>欢迎您,</small>
+			<div th:text="${session.aname}"></div>
+			</span>
+            <a class="btn btn-outline-success my-2 my-sm-0" th:href="@{/account/logout}" th:if="${session.aname != null}">退出</a>
+            <a class="btn btn-outline-success my-2 my-sm-0" th:href="@{/account/login}" th:if="${session.aname == null}">登录</a>
+
+        </div>
+        </div>
+    </nav>
+
+</header>
+
+<!-- end #header -->
+
+</body>
+
+</html>

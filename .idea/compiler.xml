@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="blog-webapi" />
+        <module name="blog-dao" />
+        <module name="blog-manager" />
+        <module name="blog-pojo" />
+        <module name="blog-webapp" />
+        <module name="blog-service" />
+        <module name="blog-base" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="blog-base" target="1.8" />
+      <module name="blog-dao" target="1.8" />
+      <module name="blog-manager" target="1.8" />
+      <module name="blog-pojo" target="1.8" />
+      <module name="blog-service" target="1.8" />
+      <module name="blog-webapi" target="1.8" />
+      <module name="blog-webapp" target="1.8" />
+      <module name="blog-webapp-admin" target="1.8" />
+      <module name="super-blog" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="blog-base" options="-parameters" />
+      <module name="blog-dao" options="-parameters" />
+      <module name="blog-manager" options="-parameters" />
+      <module name="blog-pojo" options="-parameters" />
+      <module name="blog-service" options="-parameters" />
+      <module name="blog-webapi" options="-parameters" />
+      <module name="blog-webapp" options="-parameters" />
+      <module name="super-blog" options="" />
+    </option>
+  </component>
+</project>

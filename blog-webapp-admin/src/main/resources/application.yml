@@ -1,0 +1,21 @@
+logging:
+  file:
+    path: src\main\resources\logger\ # logger文件夹需要提前生成
+jasypt:
+  encryptor:
+    password: xiaostudy
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+spring:
+ datasource:
+#    url: jdbc:mysql://121.36.203.108:3306/zhike_street?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+#    username: ENC(ZFvCvltp4xCHiT7Wj2/AD8CXFaN3wZXBAIkigyuWKDk=)
+#    password: ENC(LTwLXgqlAR6MZwjTHWFw44CYbq15O+xD7NyQyhnHwiDTP3Dr+wre7Q==)
+    url: jdbc:mysql://121.36.203.108:3306/zhike_street?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: bhwcu2a9
+ redis:
+      host: 116.62.155.130
+      port: 16379
+      password: 123456
+      database: 2
