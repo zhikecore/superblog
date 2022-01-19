@@ -10,7 +10,7 @@ spring:
  datasource:
      url: jdbc:mysql://localhost:3306/zhike_street?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
      username: root
-     password: [您的密码]
+     password: zhikecore123
  redis:
       host: 126.62.155.150
       port: 16379
