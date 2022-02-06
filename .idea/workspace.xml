@@ -11,8 +11,14 @@
   <component name="ChangeListManager">
     <list default="true" id="3ae31778-6eaa-495d-acee-85c1070b8d45" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapi/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapi/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/BlogWebappApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/BlogWebappApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/DefaultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/DefaultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/filter/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/filter/LoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/filter/SensitiveWordFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/filter/SensitiveWordFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/static/sensitive.txt" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/static/sensitive.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1031,11 +1037,6 @@
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/AdminUserServiceImpl.java</url>
           <line>51</line>
           <option name="timeStamp" value="205" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/filter/LoginFilter.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="206" />
         </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleTypeServiceImpl.java</url>

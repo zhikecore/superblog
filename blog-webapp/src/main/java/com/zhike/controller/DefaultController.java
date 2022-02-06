@@ -39,6 +39,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.Console;
 import java.io.FileNotFoundException;
@@ -82,6 +83,7 @@ public class DefaultController {
 //    @RecordLog(funModule="default",funMethod="index")
     @RequestMapping("/index")
     public ModelAndView Index(
+            HttpServletRequest request,
             Article article,
             @RequestParam(value = "pageNum",defaultValue = "0") int pageNum,
             @RequestParam(value = "pageSize", defaultValue = "5") int pageSize) {
@@ -90,6 +92,9 @@ public class DefaultController {
         log.info("info: access to default index 为主页!");
         log.error("error:default index...");
 
+        System.out.println("before:"+article.getTitle());
+        String title = request.getParameter("title");
+        System.out.println("after:"+title);
 
         //封装值到AO
 

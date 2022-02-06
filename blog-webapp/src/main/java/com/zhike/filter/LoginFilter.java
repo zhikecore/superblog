@@ -22,7 +22,7 @@ import java.io.IOException;
  * WebFilter at 2022/1/16 18:50,code by JeffreyHu
  * You can contact author with zhikecore@foxmail.com.
  */
-@WebFilter(filterName = "LoginFilter",urlPatterns = {"/*"})
+//@WebFilter(filterName = "LoginFilter",urlPatterns = {"/*"})
 public class LoginFilter implements Filter {
     //标示符：表示当前用户未登录(可根据自己项目需要改为json样式)
     String NO_LOGIN = "您还未登录";
