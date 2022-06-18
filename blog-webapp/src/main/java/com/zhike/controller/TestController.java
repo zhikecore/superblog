@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
@@ -39,7 +40,7 @@ import java.util.stream.Collectors;
 @Controller
 @RequestMapping("/test")
 @Slf4j
-public class TestController {
+public class TestController  {
 
     @Resource
     private ArticleService articleService;
@@ -59,5 +60,22 @@ public class TestController {
             System.out.println("json2"+json2);
         }
         return "/test/index";
+    }
+
+    @RequestMapping("/start")
+    public String start(){
+        return "/test/start";
+    }
+
+    @RequestMapping("/hello")
+    public String hello(Model model){
+        // 设置模板文件中使用的参数
+        model.addAttribute("title", "52Interview");
+        return "/test/hello";
+    }
+
+    @RequestMapping("/startWithWebJar")
+    public String startWithWebJar(){
+        return "/test/startWithWebJar";
     }
 }

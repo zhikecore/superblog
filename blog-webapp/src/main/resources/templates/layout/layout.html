@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
 <meta charset="UTF-8">
-<title>JeffreyHu's Blog</title>
+<title>Super Blog</title>
 <head>
 
     <!-- 不使用 CDN-->
@@ -39,6 +39,24 @@
 
     <link rel="stylesheet" href="https://www.romejs.cn/fonts/fonts.css">
     <link href="/assets/css/footer.css" rel="stylesheet" />
+
+    <!-- Matomo -->
+    <script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//192.168.31.31/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+    <!-- End Matomo Code -->
+
+
 </head>
 
 <body class="no-skin">

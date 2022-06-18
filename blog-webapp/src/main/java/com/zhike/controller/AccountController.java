@@ -70,7 +70,8 @@ public class AccountController {
         //model.addAttribute("admin",aa);
         //model.addAttribute("alist",userlist);
         //重定向
-        return "redirect:/default/index";
+        //return "redirect:/default/index";
+        return "redirect:/";
     }
 
     @RequestMapping("/goregister")//去注册页面

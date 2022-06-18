@@ -20,23 +20,25 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
  * DefaultViewConfig at 2022/1/16 21:04,code by JeffreyHu
  * You can contact author with zhikecore@foxmail.com.
  */
-@Slf4j
-//@Configuration
-public class DefaultViewConfig extends WebMvcConfigurationSupport {
-    /**
-     * 添加主页方法
-     *
-     * @param registry 主页注册器
-     */
-    public void addViewControllers(ViewControllerRegistry registry) {
-        //System.out.println("设置了主页");
-        log.info("access to DefaultViewConfig. 设置你Default.index 为主页!");
-        //设置主页
-        registry.addViewController("/").setViewName("/default/index");
-        //设置优先级
-        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
-
-        //将主页注册器添加到视图控制器中
-        super.addViewControllers(registry);
-    }
-}
+//@Slf4j
+////@Configuration
+//public class DefaultViewConfig extends WebMvcConfigurationSupport {
+//    /**
+//     * 添加主页方法
+//     *
+//     * @param registry 主页注册器
+//     */
+//    public void addViewControllers(ViewControllerRegistry registry) {
+//        //System.out.println("设置了主页");
+//        log.info("access to DefaultViewConfig. 设置你Default.index 为主页!");
+//        //设置主页
+//        //registry.addViewController("/").setViewName("/default/index");
+//        //registry.addViewController("/").setViewName("index");
+//        registry.addViewController("default").setViewName("index");
+//        //设置优先级
+//        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
+//
+//        //将主页注册器添加到视图控制器中
+//        super.addViewControllers(registry);
+//    }
+//}

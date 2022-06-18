@@ -79,6 +79,17 @@
 			<version>2.2.2</version>
 		</dependency>
 
+		<!--引入bootStrap-->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>4.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>jquery</artifactId>
+			<version>3.1.1</version>
+		</dependency>
 	</dependencies>
 
 	<!--打包方式1-->
@@ -87,6 +98,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.4.0</version>
 			</plugin>
 		</plugins>
 	</build>

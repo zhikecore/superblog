@@ -10,15 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ae31778-6eaa-495d-acee-85c1070b8d45" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_bootstrap_4_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_jquery_3_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_npm_popper_js_1_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/test/hello.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/test/home.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/BlogWebappApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/BlogWebappApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/config/DefaultViewConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/config/DefaultViewConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/AccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/DefaultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/DefaultController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/filter/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/filter/LoginFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/filter/SensitiveWordFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/filter/SensitiveWordFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/TestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/static/sensitive.txt" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/static/sensitive.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/static/avatars/zhike-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/static/avatars/zhike-logo_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/article/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/article/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,10 +62,10 @@
         <option value="XML File " />
         <option value="Enum" />
         <option value="FxmlFile" />
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
         <option value="AnnotationType" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -83,6 +93,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -192,9 +210,6 @@
       <select />
     </treeState>
   </component>
-  <component name="MavenRunner">
-    <option name="skipTests" value="true" />
-  </component>
   <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -255,7 +270,7 @@
     <property name="SearchEverywhereHistoryKey" value="plugins&#9;PSI&#9;JAVA://org.mockito.internal.configuration.plugins.Plugins" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../superblog/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../superblog" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -265,10 +280,6 @@
     <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\JavaProjects\superblog\blog-webapp\src\main\resources" />
-      <recent name="D:\javaprojects\super-blog\blog-base\src\main\java\com\zhike\blogbase\utils" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.zhike.blogwebapi.Models" />
     </key>
@@ -278,6 +289,10 @@
       <recent name="E:\JavaProjects\superblog\blog-webapp-admin\src\main\resources\static" />
       <recent name="E:\JavaProjects\superblog\blog-base\src\main\java\com\zhike\blogbase\enums" />
       <recent name="E:\JavaProjects\superblog\blog-webapp\src\main\resources\templates\contribute" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\JavaProjects\superblog\blog-webapp\src\main\resources" />
+      <recent name="D:\javaprojects\super-blog\blog-base\src\main\java\com\zhike\blogbase\utils" />
     </key>
   </component>
   <component name="RunManager" selected="Application.BlogWebappApplication">
@@ -719,13 +734,8 @@
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/config/DefaultViewConfig.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/TestController.java</url>
-          <line>42</line>
+          <line>43</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -1037,6 +1047,11 @@
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/AdminUserServiceImpl.java</url>
           <line>51</line>
           <option name="timeStamp" value="205" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/config/DefaultViewConfig.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="208" />
         </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleTypeServiceImpl.java</url>

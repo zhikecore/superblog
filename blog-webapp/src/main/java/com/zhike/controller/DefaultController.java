@@ -67,7 +67,8 @@ import java.util.stream.Collectors;
  * You can contact author with zhikecore@foxmail.com.
  */
 @Controller
-@RequestMapping("/default")
+//@RequestMapping("/default")
+@RequestMapping("/")
 @Slf4j
 public class DefaultController {
 
@@ -81,7 +82,8 @@ public class DefaultController {
     private CarouselService carouselService;
 
 //    @RecordLog(funModule="default",funMethod="index")
-    @RequestMapping("/index")
+    //@RequestMapping("/index")
+@RequestMapping("/")
     public ModelAndView Index(
             HttpServletRequest request,
             Article article,
