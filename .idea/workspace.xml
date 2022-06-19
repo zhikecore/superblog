@@ -10,25 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ae31778-6eaa-495d-acee-85c1070b8d45" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_bootstrap_4_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_jquery_3_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_npm_popper_js_1_11_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/test/hello.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/test/home.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/config/DefaultViewConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/config/DefaultViewConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/config/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/DefaultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/DefaultController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/static/avatars/zhike-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/static/avatars/zhike-logo_white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/article/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/article/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/header_bak.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
