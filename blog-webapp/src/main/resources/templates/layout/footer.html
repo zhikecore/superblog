@@ -1,89 +1,67 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:layout="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org"
-      layout:decorator="layout/layout">
+<html lang="en" xmlns:layout="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
 <meta charset="UTF-8">
 <!-- 通过自有函数输出HTML头部信息 -->
-<meta name="description" content="智客坊">
+<meta name="description" content="SuperBlog">
 <meta name="keywords" content="互联网,大数据,C#,blog,hadoop,elasticsearch">
 
 <body>
 
-<!--<footer class="navbar-fixed-bottom" th:fragment="footer">-->
-
-    <!--<div class="container">-->
-        <!--<div class="row" style="text-align: center;">-->
-            <!--<div class="col-sm-3 col-md-3 col-lg-3">-->
-                <!--<a href="#" style=" color: gray;">关于我们</a>-->
-            <!--</div>-->
-            <!--<div class="col-sm-3 col-md-3 col-lg-3">-->
-                <!--<a href="#" style=" color: gray;">联系方式</a></li>-->
-            <!--</div>-->
-            <!--<div class="col-sm-3 col-md-3 col-lg-3">-->
-                <!--<a href="#" style=" color: gray;">旗下网站</a></li>-->
-            <!--</div>-->
-            <!--<div class="col-sm-3 col-md-3 col-lg-3">-->
-                <!--<a href="#" style=" color: gray;">特别致谢</a></li>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</footer>-->
-
-<!--https://www.romejs.cn/-->
-<div th:fragment="footer" id="footerdiv">
+<div th:fragment="common_footer" id="footerdiv">
     <footer class="footer footer--dark" >
         <div class="container">
             <div class="row footer__links">
                 <div class="col footer__col">
-                    <h4 class="footer__title">中文文档</h4>
+                    <h4 class="footer__title">合作伙伴</h4>
                     <ul class="footer__items">
-                        <li class="footer__item"><a class="footer__link-item" href="https://www.romejs.cn/docs/introduction/installation">安装</a></li>
-                        <li class="footer__item"><a class="footer__link-item" href="https://www.romejs.cn/docs/introduction/getting-started/">入门</a></li>
+                        <li class="footer__item"><a class="footer__link-item" href="https://www.huaweicloud.com/">华为云</a></li>
+                        <li class="footer__item"><a class="footer__link-item" href="https://www.qiniu.com/">七牛云</a></li>
                     </ul>
                 </div>
                 <div class="col footer__col">
-                    <h4 class="footer__title">社区</h4>
+                    <h4 class="footer__title">关于我们</h4>
                     <ul class="footer__items">
-                        <li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://github.com/romejs/rome/blob/master/.github/CODE_OF_CONDUCT.md">行为准则</a></li>
-                        <li class="footer__item"><a class="footer__link-item" href="https://www.romejs.cn/docs/community/Contributing">贡献</a></li>
+                        <li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="#">关于</a></li>
+                        <li class="footer__item"><a class="footer__link-item" href="https://www.romejs.cn/docs/community/Contributing">联系我们</a></li>
                     </ul>
                 </div>
                 <div class="col footer__col">
-                    <h4 class="footer__title">更多资源</h4>
+                    <h4 class="footer__title">学习资源</h4>
                     <ul class="footer__items">
-                        <li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://github.com/romejs/rome">GitHub</a></li>
+                        <li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://github.com/romejs/rome">文章列表</a></li>
+                    </ul>
+                    <ul class="footer__items">
+                        <li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://github.com">解决方案</a></li>
                     </ul>
                 </div>
                 <div class="col footer__col">
-                    <h4 class="footer__title">友链</h4>
+                    <h4 class="footer__title">友情链接</h4>
                     <ul class="footer__items">
-                        <li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.bootcss.com/">Bootstrap 中文网</a></li>
-                        <li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.webpackjs.com/">Webpack</a></li>
-                        <li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.rollupjs.com/">Rollup</a></li>
-                        <li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.parceljs.cn/">Parcel</a></li>
-                        <li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.babeljs.cn/">Babel</a></li>
-                        <li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://jestjs.bootcss.com/">Jest</a></li>
-                        <li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.miragejs.cn/">Mirage</a></li>
+                        <li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.cnblogs.com/">博客园</a></li>
+                        <li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.52interview.com/">智客工坊</a></li>
                     </ul>
                 </div>
             </div>
             <div class="text--center">
                 <div class="margin-bottom--sm">
-                    <a href="https://opensource.facebook.com/" target="_blank" rel="noopener noreferrer" class="footerLogoLink_1Wg7"><img class="footer__logo" alt="Facebook Open Source Logo" src="https://www.romejs.cn/img/oss_logo.png" /></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="footerLogoLink_1Wg7"><img class="footer__logo" style="margin: -4px 8px 0 0;border-radius: 100%;border: 2px solid #FFF;max-width: 40px;"  alt="Facebook Open Source Logo" src="../../avatars/logo2.png" /></a>
                 </div>
                 <div>
                     <div>
-                        Copyright &copy; 2020 Facebook, Inc. Built with Docusaurus.
+                        Copyright &copy; 2022 super blog.
                         <br />
-                        <a href="http://www.beian.miit.gov.cn/" target="_blank">京ICP备11008151号-23</a>
+                        <a href="http://www.beian.miit.gov.cn/" target="_blank">xxxICP备xx号-001</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+    <!--回到顶部-->
+    <a class="to-top"
+       style="z-index: 1200; cursor: pointer; position: fixed; right: 15px; bottom: 30px; display: none;">
+        <img src="/assets/img/top.svg" alt="返回顶部" title="返回顶部">
+    </a>
 </div>
 </body>
 
 </html>>
-
-
-

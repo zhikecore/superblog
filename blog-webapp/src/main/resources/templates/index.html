@@ -244,19 +244,19 @@
                             th:text="${page.pages}"></span>页,总记录数<span th:text="${page.total}"></span>
                     </div>
                     <div style="float: right" th:if="${page.pages>0}">
-                        <a th:href="'/default/index?pageNum=1'" th:text="首页" th:if="${page.current>1}"
+                        <a th:href="'/?pageNum=1'" th:text="首页" th:if="${page.current>1}"
                            th:class="page-item"></a>
-                        <a th:href="'/default/index?pageNum=' + ${page?.current-1}" th:text="上一页" th:class="page-item"
+                        <a th:href="'/?pageNum=' + ${page?.current-1}" th:text="上一页" th:class="page-item"
                            th:if="${page.current>1}"></a>
 
-                        <a th:href="'/default/index?pageNum=' + ${i}"
+                        <a th:href="'/?pageNum=' + ${i}"
                            th:each="i :${#numbers.sequence(1, page.pages)}" th:text="${i}"
                            th:class="${page.current == i}? 'page-item active' :'page-item' "></a>
 
-                        <a th:href="'/default/index?pageNum=' +(${page.current+1})" th:text="下一页" th:class="page-item"
+                        <a th:href="'/?pageNum=' +(${page.current+1})" th:text="下一页" th:class="page-item"
                            th:if="${page.current<page.pages}"></a>
 
-                        <a th:href="'/default/index?pageNum=' + ${page.pages}" th:class="page-item"
+                        <a th:href="'/?pageNum=' + ${page.pages}" th:class="page-item"
                            th:if="${page.current<page.pages}">尾页</a>
                     </div>
 
@@ -310,10 +310,10 @@
                     </section>
 
                 </div><!-- end #sidebar -->
-                <a class="to-top"
-                   style="z-index: 1200; cursor: pointer; position: fixed; right: 15px; bottom: 30px; display: none;">
-                    <img src="/assets/img/top.svg" alt="返回顶部" title="返回顶部">
-                </a>
+<!--                <a class="to-top"-->
+<!--                   style="z-index: 1200; cursor: pointer; position: fixed; right: 15px; bottom: 30px; display: none;">-->
+<!--                    <img src="/assets/img/top.svg" alt="返回顶部" title="返回顶部">-->
+<!--                </a>-->
             </div>
 
         </div>

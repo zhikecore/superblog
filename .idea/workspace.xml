@@ -11,7 +11,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3ae31778-6eaa-495d-acee-85c1070b8d45" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/static/assets/css/footer1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/category/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/category/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/category/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/category/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
