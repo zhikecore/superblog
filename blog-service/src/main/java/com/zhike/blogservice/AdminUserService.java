@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.zhike.blogpojo.AO.ArticleTypeAO;
 import com.zhike.blogpojo.AO.UserQueryAO;
+import com.zhike.blogpojo.BO.CreateAdminUserRequestBo;
 import com.zhike.blogpojo.DO.Adminuser;
 import com.zhike.blogpojo.DO.Article;
 import com.zhike.blogpojo.VO.ArticleTypeVO;
@@ -28,6 +29,8 @@ import com.zhike.blogpojo.VO.UserVO;
 public interface AdminUserService  extends IService<Adminuser> {
 
     boolean login(String account,String passwordsalt);
+
+    boolean register(CreateAdminUserRequestBo bo);
 
     IPage<UserVO> searchByPage(UserQueryAO ao);
 }

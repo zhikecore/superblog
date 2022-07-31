@@ -1,12 +1,16 @@
 package com.zhike.blogpojo.DO;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 /**
@@ -104,19 +108,11 @@ public class Adminuser implements Serializable {
     @TableField("Description")
     private String Description;
 
+    @TableField(value = "CreateTime",fill = FieldFill.INSERT)
+    private Timestamp createTime;
 
-
-    /**
-     * 创建时间
-     */
-    @TableField("CreateTime")
-    private LocalDateTime CreateTime;
-
-    /**
-     * 修改时间
-     */
-    @TableField("ModifyTime")
-    private LocalDateTime ModifyTime;
+    @TableField(value = "ModifyTime",fill = FieldFill.INSERT_UPDATE)
+    private Timestamp updateTime;
 
 
 }

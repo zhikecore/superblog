@@ -3,6 +3,7 @@ package com.zhike.Interceptor;
 import com.zhike.blogbase.annotation.EnableAuth;
 import com.zhike.blogbase.annotation.IgnoreAuth;
 import org.springframework.web.method.HandlerMethod;
+import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -24,7 +25,7 @@ import java.lang.reflect.Method;
  * AuthHandlerInterceptor at 2021/1/3 18:36,code by JeffreyHu
  * You can contact author with zhikecore@foxmail.com.
  */
-public class AuthHandlerInterceptor extends HandlerInterceptorAdapter {
+public class AuthHandlerInterceptor implements HandlerInterceptor {
 
     /**
      * 登录拦截器
@@ -40,8 +41,6 @@ public class AuthHandlerInterceptor extends HandlerInterceptorAdapter {
         /***
          * controller权限控制
          */
-        //HandlerMethod handlerMethod = null;
-
         // 如果请求的不是方法 则直接跳过当前拦截器
         if (!(handler instanceof HandlerMethod)) {
             return true;
@@ -68,24 +67,6 @@ public class AuthHandlerInterceptor extends HandlerInterceptorAdapter {
         if (auth == null) {
             return true;
         }
-
-        /*
-        //如果请求的不是方法 则直接跳过当前拦截器
-        if (!(handler instanceof HandlerMethod)) {
-            return true;
-        }
-
-        Method method = ((HandlerMethod) handler).getMethod();
-
-        //从类上获取注解
-        EnableAuth enableAuth = method.getDeclaringClass().getAnnotation(EnableAuth.class);
-
-        //如果没有Auth 注解 则跳过鉴权
-        if (enableAuth == null) {
-            return true;
-        }*/
-
-
         Object username = request.getSession().getAttribute("aname");
         if (username != null) {
             //已登录放行
@@ -93,18 +74,9 @@ public class AuthHandlerInterceptor extends HandlerInterceptorAdapter {
         } else {
             // 未登陆，返回登录页面
             request.setAttribute("msg","无权限请先登录");
-            //request.getRequestDispatcher("/default/index").forward(request, response);
             request.getRequestDispatcher("/account/login").forward(request, response);
             return false;
         }
-//        Object username = request.getSession().getAttribute("aname");
-//        if (username != null) {
-//            return true;
-//        } else {
-//            request.setAttribute("login_error", "请先登录");
-//            request.getRequestDispatcher("/").forward(request, response);
-//            return false;
-//        }
     }
 
 

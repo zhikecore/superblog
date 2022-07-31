@@ -8,6 +8,7 @@ import org.apache.ibatis.reflection.MetaObject;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 /**
@@ -47,12 +48,12 @@ public class MybatisPlusConfig implements MetaObjectHandler {
 
     @Override
     public void insertFill(MetaObject metaObject) {
-        this.setFieldValByName("created", LocalDateTime.now(), metaObject);
-        this.setFieldValByName("modified", LocalDateTime.now(), metaObject);
+        this.setFieldValByName("createTime", new Timestamp(System.currentTimeMillis()), metaObject);
+        this.setFieldValByName("updateTime", new Timestamp(System.currentTimeMillis()), metaObject);
     }
 
     @Override
     public void updateFill(MetaObject metaObject) {
-        this.setFieldValByName("modified", LocalDateTime.now(), metaObject);
+        this.setFieldValByName("updateTime", new Timestamp(System.currentTimeMillis()), metaObject);
     }
 }

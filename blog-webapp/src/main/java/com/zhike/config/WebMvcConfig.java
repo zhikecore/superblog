@@ -32,7 +32,21 @@ public class WebMvcConfig implements WebMvcConfigurer {
      */
     @Override
     public void addInterceptors(InterceptorRegistry  registry) {
-        registry.addInterceptor(new AuthHandlerInterceptor()).addPathPatterns("/**")
-                .excludePathPatterns("/", "/account/login","/account/gologin","/default/index","/assets/**", "/css/**", "/font/**","/font-awesome4.0.3/**","/js/**","/images/**","/avatars/**", "/img/**");
+        registry.addInterceptor(new AuthHandlerInterceptor()).addPathPatterns("/**")//所有请求路径都被拦截
+                .excludePathPatterns(//不拦截的请求路径
+                        "/",
+                        "/account/login",
+                        "/account/gologin",
+                        "/account/register",
+                        "/common/success",
+                        "/common/failure",
+                        "/assets/**",
+                        "/css/**",
+                        "/font/**",
+                        "/font-awesome4.0.3/**",
+                        "/js/**",
+                        "/images/**",
+                        "/avatars/**",
+                        "/img/**");
     }
 }

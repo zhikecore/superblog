@@ -4,54 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>账号注册</title>
+    <!-- 不使用 CDN-->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!--<link href="/assets/css/style.css" rel="stylesheet" />-->
+    <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet" />
+
     <script src="/assets/js/jquery-2.2.1.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
 
-    <script>
-        function register() {
-            var account = $("#account").val();
-            var password = $("#password").val();
-            var rePassword = $("#rePassword").val();
-            var email = $("#email").val();
-            var nickname=$("#nickname").val();
-            var phone=$("#phone").val();
-
-            if (Number(password) == Number(rePassword)){
-                $.post("/account/register",
-                    {
-                        account:account,
-                        password:password,
-                        rePassword:rePassword,
-                        email:email,
-                        nickname:nickname,
-                        phone:phone
-                    },function (res) {
-                        if (res ==true){
-                            alert("注册成功");
-                            window.location.href ="/account/login";
-                        } else {
-                            alert("注册失败，请检查数据重试");
-                        }
-                    })
-            }else {
-                alert("两次密码不一致！");
-            }
+    <style>
+        .col-center-block {
+            float: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
-    </script>
+    </style>
 
 </head>
 <body>
 
-<h2>账号注册</h2>
-请输入姓名：<input type="text" id="account"/><br><br>
-请输入密码：<input type="password" id="password" placeholder="仅支持整数" /><br><br>
-请确认密码：<input type="password" id="rePassword" placeholder="仅支持整数"/><br><br>
-请确认邮箱：<input type="email" id="email" placeholder="邮箱"/><br><br>
-请输入昵称：<input type="text" id="nickname" placeholder="昵称"/><br><br>
-请输入电话：<input type="text" id="Phone" placeholder="手机"/><br><br>
-<!--请选择角色：<select id="job" style="width: 173px">-->
-<!--<option value="管理员">管理员</option>-->
-<!--</select><br><br>-->
-<button onclick="register()">注册</button>
+<!--bs中所有的均应该包裹在其中。-->
+<div class="container">
+    <!-- row是珊栏系统的包裹容器-->
+    <div class="row">
+        <!-- col-md-x 表示此珊栏占据几个格子，offset-x 是偏移x格子-->
+        <div class="col-md-4 col-md-offset-4 col-center-block">
+            <!-- panel分为3个部分，heading,body,footer其中heading部分的颜色来自于panel-default的颜色-->
+            <div class="panel panel-default">
+                <!-- panel-headeing是有颜色的，此颜色来自于panel-default-->
+                <div class="panel-heading">注册</div>
+                <div class="panel-body">
+                    <form action="/account/goregister" method="post">
+                        <!--
+                             1. form-group设置了距离上下部分div的距离，更美观。
+                             2. 对于form-group 设置了has-feedback可以使其有背景图
+                        -->
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" name="phone" required="required" placeholder="手机号码">
+                            <span class="glyphicon  glyphicon-phone form-control-feedback"></span>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" name="account" required="required" placeholder="用户名">
+                            <span class="glyphicon  glyphicon-user form-control-feedback"></span>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" name="nickname" required="required" placeholder="昵称">
+                            <span class="glyphicon  glyphicon-user form-control-feedback"></span>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <input type="password" class="form-control" placeholder="密码" name="password" required="required">
+                            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <input type="password" class="form-control" placeholder="重复密码" name="rePassword" required="required">
+                            <span class="glyphicon glyphicon-retweet form-control-feedback"></span>
+                        </div>
+                        <!-- button的btn-block 可以占满当前珊栏而不用自适应。-->
+                        <button type="submit" class="btn btn-success btn-block btn-lg">注册</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 </body>
 
 </html>

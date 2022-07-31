@@ -1,5 +1,8 @@
 package com.zhike.controller;
 
+import com.zhike.blogbase.utils.BeanHelper;
+import com.zhike.blogpojo.BO.CreateAdminUserRequestBo;
+import com.zhike.blogpojo.DTO.input.CreateAdminUserRequestDto;
 import com.zhike.blogpojo.Query.LoginRequest;
 import com.zhike.blogservice.AdminUserService;
 import org.slf4j.Logger;
@@ -8,8 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.DigestUtils;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -74,8 +77,8 @@ public class AccountController {
         return "redirect:/";
     }
 
-    @RequestMapping("/goregister")//去注册页面
-    public String goregister()
+    @RequestMapping("/register")//去注册页面
+    public String register()
     {
         return  "register";
     }
@@ -83,30 +86,22 @@ public class AccountController {
     /**
      * 注册
      * */
-    /*
-    @RequestMapping("/register")
-    @ResponseBody
-    public boolean register(CreateAdminUserRequest request){
-        //对密码进行 md5 加密
-        String md5Password = DigestUtils.md5DigestAsHex(request.getPassword().getBytes());
+    @PostMapping("/goregister")
+    //@ResponseBody
+    public String goregister(@Validated CreateAdminUserRequestDto dto){
 
-        Adminuser adminuser=new Adminuser();
-        adminuser.setAccount(request.getAccount());
-        adminuser.setPasswordSalt(md5Password);
-        adminuser.setEmail(request.getEmail());
-        adminuser.setNickName(request.getNickname());
-        adminuser.setPhone(request.getPhone());
-
-        int i=adminUserService.insertAdminUser(adminuser);
-
-        if (i>0) {
-            return true;
-        }else {
-            return false;
+        CreateAdminUserRequestBo bo =BeanHelper.convertBean(dto,CreateAdminUserRequestBo::new);
+        Boolean result=adminUserService.register(bo);
+        if(result)
+        {
+            return "redirect:/common/success";
+            //return "/common/success";
+        }else
+        {
+            return "redirect:/common/failure";
+            //return "/common/failure";
         }
     }
-
-    */
 
     /* 注销登录
      * @param session
