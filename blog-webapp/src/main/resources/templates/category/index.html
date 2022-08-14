@@ -97,11 +97,12 @@
                             <div class="row">
                                 <div class="col-lg-3 mb -4" style="margin-bottom:15px;" th:each="articletype:${page?.records}">
                                     <div class="card">
-                                        <a th:href="'/category/detail?categoryId='+${articletype.Id}"><img class="card-img-top" th:src="${articletype.Cover}" alt="Card image cap"></a>
+                                        <a th:href="'/category/detail/'+${articletype.Id}"><img class="card-img-top" th:src="${articletype.Cover}" alt="Card image cap"></a>
                                         <div class="card-body">
                                             <h5 class="card-title border-bottom pb-3" th:text="${articletype.Name}"><a th:href="'/category/detail/?categoryId='+${articletype.Id}" class="float-right d-inline-flex share"><i class="fas fa-share-alt text-primary"></i></a></h5>
                                             <p class="card-text"></p>
-                                            <a class="btn btn-outline-success btn-sm" th:href="'/category/detail?categoryId='+${articletype.Id}">查看更多</a>
+<!--                                            <a class="btn btn-outline-success btn-sm" th:href="'/category/detail?categoryId='+${articletype.Id}">查看更多</a>-->
+                                            <a class="btn btn-outline-success btn-sm" th:href="'/category/detail/'+${articletype.Id}">查看更多</a>
                                         </div>
                                     </div>
                                 </div>

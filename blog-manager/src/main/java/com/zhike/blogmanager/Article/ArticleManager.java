@@ -2,11 +2,13 @@ package com.zhike.blogmanager.Article;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zhike.blogbase.exception.BizException;
 import com.zhike.blogbase.utils.BeanHelper;
 import com.zhike.blogdao.mapper.AdminuserMapper;
 import com.zhike.blogdao.mapper.ArticleMapper;
+import com.zhike.blogpojo.AO.ArticleAO;
 import com.zhike.blogpojo.DO.Adminuser;
 import com.zhike.blogpojo.DO.Article;
 import com.zhike.blogpojo.VO.ArticleVO;
@@ -86,4 +88,32 @@ public class ArticleManager {
         return pagedVo;
     }
 
+    public IPage<ArticleVO> searchByPage(ArticleAO ao)
+    {
+        //参数一是当前页，参数二是每页个数
+        Page<Article> page=new Page<>(ao.getPage(),ao.getLimit());
+
+        IPage<Article> pagedResource=articleMapper.selectPage(page, Wrappers.<Article>lambdaQuery()
+                .eq(ao.getArticleTypeId()>0,Article::getArticleTypeId,ao.getArticleTypeId())
+                .like(ao.getTitle()!=null,Article::getTitle, ao.getTitle()));
+
+
+
+        //封装VO
+        List<ArticleVO> items =
+                pagedResource.getRecords().stream()
+                        .map(
+                                item -> {
+                                    ArticleVO vo = BeanHelper.convertBean(item, ArticleVO::new);
+                                    vo.setArticleTypeName("类型名");
+                                    return vo;
+                                })
+                        .collect(Collectors.toList());
+
+        IPage<ArticleVO> pagedVo=new Page<ArticleVO>();
+        BeanUtils.copyProperties(pagedResource, pagedVo);
+        pagedVo.setRecords(items);
+
+        return pagedVo;
+    }
 }

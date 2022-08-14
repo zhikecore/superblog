@@ -1,6 +1,7 @@
 package com.zhike.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.zhike.blogmanager.Article.ArticleManager;
 import com.zhike.blogpojo.AO.ArticleAO;
 import com.zhike.blogpojo.AO.ArticleTypeAO;
 import com.zhike.blogpojo.DO.Article;
@@ -10,6 +11,7 @@ import com.zhike.blogpojo.VO.ArticleVO;
 import com.zhike.blogservice.ArticleTypeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -43,8 +45,8 @@ public class CategoryController {
     //@Resource
     //private ArticleService articleService;
 
-//    @Autowired
-//    private ArticleManager articleManager;
+    @Resource
+    private ArticleManager articleManager;
 
     @RequestMapping("/index")
     public ModelAndView Index(
@@ -68,30 +70,29 @@ public class CategoryController {
 
     }
 
-    @RequestMapping("/detail")
+    @RequestMapping("/detail/{categoryId}")
     public ModelAndView Detail(
+            @PathVariable("categoryId") int categoryId,
             Article article,
             @RequestParam(value = "pageNum",defaultValue = "0") int pageNum,
-            @RequestParam(value = "pageSize", defaultValue = "5") int pageSize,
-            @RequestParam(value = "categoryId",defaultValue = "0") int categoryId) {
-
+            @RequestParam(value = "pageSize", defaultValue = "5") int pageSize
+    ) {
         //封装值到AO
         ArticleAO ao = new ArticleAO();
         ao.setArticleTypeId(categoryId);
+        ao.setTitle(article.getTitle());
         ao.setLimit(pageSize);
         ao.setPage(pageNum);
 
         //定义一个视图对象名字时index.html  前缀和后缀都有封装,只需要写名字
         ModelAndView modelAndView = new ModelAndView("category/detail");
-        //IPage<ArticleVO> page= articleManager.searchByPage(pageNum,pageSize,categoryId);
-        IPage<ArticleVO> page=articleTypeService.getArticlesByTypeId(pageNum,pageSize,categoryId);
+        IPage<ArticleVO> page=articleManager.searchByPage(ao);
 
         //相当于setAttriute("pageInfo",pageInfo)
         modelAndView.addObject("page",page);
         modelAndView.addObject("article",article);
         modelAndView.addObject("articleTypeId",categoryId);
         return modelAndView;
-
     }
 
 

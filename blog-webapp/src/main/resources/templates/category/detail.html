@@ -60,6 +60,13 @@
             color: red;
             border: 1px solid red;
         }
+        .btn-danger {
+            color: #fff;
+            background-color: #d15b47;
+            border-color: #d15b47;
+        }
+        .top10 { margin-top:10px; }
+        .top20 { margin-top:20px; }
     </style>
 
 </head>
@@ -84,6 +91,19 @@
 
             <!--</div>-->
 
+            <div class="row top20"></div>
+
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <form class="form-inline my-2 my-lg-0" method="get" th:action="'/category/detail/'+${articleTypeId}">
+                        <input class="form-control mr-sm-2" type="search" name="title" placeholder="请输入关键词搜索" aria-label="Search"
+                               th:value="${article.title}">
+                        <button class="btn btn-danger my-2 my-sm-0" type="submit">GO</button>
+                        <hr/>
+                    </form>
+                </div><!-- end #main-->
+
+            </div>
             <div class="row mt-3"></div>
 
             <div class="row">
@@ -123,19 +143,19 @@
                             th:text="${page.pages}"></span>页,总记录数<span th:text="${page.total}"></span>
                     </div>
                     <div style="float: right" th:if="${page.pages>0}">
-                        <!--<a th:href="'/category/detail?categoryId='+${page?.ArticleTypeId}+'&pageNum=1'" th:text="首页" th:if="${page.current>1}" th:class="page-item"></a>-->
-                        <a th:href="'/category/detail?categoryId='+${articleTypeId}+'&pageNum=1'" th:text="首页" th:if="${page.current>1}" th:class="page-item"></a>
-                        <a th:href="'/category/detail?categoryId='+${articleTypeId}+'&pageNum=' + ${page?.current-1}" th:text="上一页" th:class="page-item"
+                        <a th:href="'/category/detail/'+${articleTypeId}+'?pageNum=1'" th:text="首页" th:if="${page.current>1}" th:class="page-item"></a>
+                        <a th:href="'/category/detail/'+${articleTypeId}+'?pageNum=' + ${page?.current-1}" th:text="上一页" th:class="page-item"
                            th:if="${page.current>1}"></a>
 
-                        <a th:href="'/category/detail?categoryId='+${articleTypeId}+'&pageNum=' + ${i}"
+                        <a th:href="'/category/detail/'+${articleTypeId}+'?pageNum=' + ${i}"
                            th:each="i :${#numbers.sequence(1, page.pages)}" th:text="${i}"
                            th:class="${page.current == i}? 'page-item active' :'page-item' "></a>
 
-                        <a th:href="'/category/detail?categoryId='+${articleTypeId}+'&pageNum=' +(${page.current+1})" th:text="下一页" th:class="page-item"
+
+                        <a th:href="'/category/detail/'+${articleTypeId}+'?pageNum=' +(${page.current+1})" th:text="下一页" th:class="page-item"
                            th:if="${page.current<page.pages}"></a>
 
-                        <a th:href="'/category/detail?categoryId='+${articleTypeId}+'&pageNum=' + ${page.pages}" th:class="page-item"
+                        <a th:href="'/category/detail/'+${articleTypeId}+'?pageNum=' + ${page.pages}" th:class="page-item"
                            th:if="${page.current<page.pages}">尾页</a>
                     </div>
 

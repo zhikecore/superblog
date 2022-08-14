@@ -10,19 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ae31778-6eaa-495d-acee-85c1070b8d45" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-base/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-pojo/src/main/java/com/zhike/blogpojo/DO/Adminuser.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-pojo/src/main/java/com/zhike/blogpojo/DO/Adminuser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/AdminUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/AdminUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/AdminUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/AdminUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/Interceptor/AuthHandlerInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/Interceptor/AuthHandlerInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-manager/src/main/java/com/zhike/blogmanager/Article/ArticleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-manager/src/main/java/com/zhike/blogmanager/Article/ArticleManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/config/MybatisPlusConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/config/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/filter/SensitiveWordFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/filter/SensitiveWordFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/CategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/category/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/category/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/category/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/category/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -824,29 +819,14 @@
           <option name="timeStamp" value="99" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/CategoryController.java</url>
-          <line>78</line>
-          <option name="timeStamp" value="103" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/CategoryController.java</url>
-          <line>92</line>
-          <option name="timeStamp" value="105" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/blog-manager/src/main/java/com/zhike/blogmanager/Article/ArticleManager.java</url>
-          <line>85</line>
+          <line>87</line>
           <option name="timeStamp" value="106" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleTypeServiceImpl.java</url>
           <line>79</line>
           <option name="timeStamp" value="108" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/CategoryController.java</url>
-          <line>86</line>
-          <option name="timeStamp" value="109" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/aop/RecordLogAspect.java</url>
@@ -1088,15 +1068,25 @@
           <line>55</line>
           <option name="timeStamp" value="205" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/config/DefaultViewConfig.java</url>
           <line>35</line>
           <option name="timeStamp" value="208" />
         </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/blog-manager/src/main/java/com/zhike/blogmanager/Article/ArticleManager.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="217" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/CategoryController.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="220" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/Interceptor/AuthHandlerInterceptor.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="212" />
+          <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/CategoryController.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="222" />
         </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleTypeServiceImpl.java</url>
