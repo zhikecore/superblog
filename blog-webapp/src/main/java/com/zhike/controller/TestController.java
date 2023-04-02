@@ -4,6 +4,7 @@ import com.zhike.blogbase.result.PagedResult;
 //import com.zhike.blogbase.utils.WorkBookUtils;
 import com.zhike.blogbase.utils.RedisUtils;
 import com.zhike.blogpojo.AO.ArticleAO;
+import com.zhike.blogpojo.BO.ArticleByUserIdBo;
 import com.zhike.blogpojo.VO.ArticleVO;
 import com.zhike.blogservice.ArticleService;
 import lombok.extern.slf4j.Slf4j;
@@ -51,14 +52,18 @@ public class TestController  {
     @RequestMapping("/index")//主页
     public String index(){
 
-        String cacheKey="im:session:118962";
-        if(StringUtils.isNotEmpty(cacheKey))
-        {
-            Object object = redisUtils.get(cacheKey);
-            //System.out.println("cacheValue:"+cacheValue);
-            String json2 = object.toString();
-            System.out.println("json2"+json2);
-        }
+//        String cacheKey="im:session:118962";
+//        if(StringUtils.isNotEmpty(cacheKey))
+//        {
+//            Object object = redisUtils.get(cacheKey);
+//            //System.out.println("cacheValue:"+cacheValue);
+//            String json2 = object.toString();
+//            System.out.println("json2"+json2);
+//        }
+
+        ArticleByUserIdBo bo=new ArticleByUserIdBo();
+        bo.setUsername("jeffreyHu");
+        articleService.listArticleByUserId(bo);
         return "/test/index";
     }
 

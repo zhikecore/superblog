@@ -1,13 +1,18 @@
 package com.zhike.blogdao.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.zhike.blogbase.annotation.ArticleParamsConvert;
+import com.zhike.blogpojo.BO.ArticleByUserIdBo;
 import com.zhike.blogpojo.DO.Article;
+import com.zhike.blogpojo.VO.ArticleVO;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Mapper
 @Repository
@@ -24,4 +29,7 @@ public interface ArticleMapper extends BaseMapper<Article> {
     @Update("UPDATE `article` SET `Tags`=#{Tags},`Title`=#{Title}\n" +
             "WHERE id=#{Id}")
     int updateByid(@Param("Id") int id , @Param("Tags") String tags,@Param("Title") String title);
+
+    //@ArticleParamsConvert()
+    List<ArticleVO> listArticleByUserId(@Param("params") ArticleByUserIdBo params);
 }

@@ -8,13 +8,16 @@ import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.zhike.blogbase.annotation.ArticleParamsConvert;
 import com.zhike.blogbase.exception.BizException;
 import com.zhike.blogbase.result.PagedResult;
 import com.zhike.blogbase.result.SuperPage;
 import com.zhike.blogbase.utils.BeanHelper;
+import com.zhike.blogbase.utils.JsonUtil;
 import com.zhike.blogbase.utils.StringUtil;
 import com.zhike.blogdao.mapper.ArticleMapper;
 import com.zhike.blogpojo.AO.ArticleAO;
+import com.zhike.blogpojo.BO.ArticleByUserIdBo;
 import com.zhike.blogpojo.DO.Article;
 import com.zhike.blogpojo.VO.ArticleVO;
 import com.zhike.blogservice.ArticleService;
@@ -218,4 +221,13 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper,Article> imple
     {
         return  articleMapper.updateByid(id,tags,title);
     }
+
+    @Override
+    @ArticleParamsConvert()
+    public List<ArticleVO> listArticleByUserId(ArticleByUserIdBo bo)
+    {
+        List<ArticleVO> articles=articleMapper.listArticleByUserId(bo);
+        return  articles;
+    }
+
 }

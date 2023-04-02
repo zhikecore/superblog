@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.apache.poi:poi:4.1.0">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/4.1.0/poi-4.1.0.jar!/" />
+      <root url="jar://E:/software/java/apache-maven-3.6.0/Maven_Repo/org/apache/poi/poi/4.1.0/poi-4.1.0.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/4.1.0/poi-4.1.0-javadoc.jar!/" />
+      <root url="jar://E:/software/java/apache-maven-3.6.0/Maven_Repo/org/apache/poi/poi/4.1.0/poi-4.1.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/4.1.0/poi-4.1.0-sources.jar!/" />
+      <root url="jar://E:/software/java/apache-maven-3.6.0/Maven_Repo/org/apache/poi/poi/4.1.0/poi-4.1.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -9,11 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="blog-webapi" />
         <module name="blog-dao" />
-        <module name="blog-manager" />
         <module name="blog-pojo" />
+        <module name="blog-manager" />
         <module name="blog-webapp" />
-        <module name="blog-service" />
         <module name="blog-base" />
+        <module name="blog-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -37,7 +37,7 @@
       <module name="blog-service" options="-parameters" />
       <module name="blog-webapi" options="-parameters" />
       <module name="blog-webapp" options="-parameters" />
-      <module name="super-blog" options="" />
+      <module name="super-blog" options="-parameters" />
     </option>
   </component>
 </project>

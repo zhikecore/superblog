@@ -2,10 +2,13 @@ package com.zhike.blogservice;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.zhike.blogbase.annotation.ArticleParamsConvert;
 import com.zhike.blogbase.result.PagedResult;
 import com.zhike.blogpojo.AO.ArticleAO;
+import com.zhike.blogpojo.BO.ArticleByUserIdBo;
 import com.zhike.blogpojo.DO.Article;
 import com.zhike.blogpojo.VO.ArticleVO;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -37,4 +40,7 @@ public interface ArticleService extends IService<Article> {
 
    int updateByid(int id ,String tags,String title);
    IPage<ArticleVO> searchByPage(long start, long size, String name);
+
+   @ArticleParamsConvert()
+   List<ArticleVO> listArticleByUserId(ArticleByUserIdBo bo);
 }

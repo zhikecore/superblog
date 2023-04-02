@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.melloware:jasypt:1.9.4">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/com/melloware/jasypt/1.9.4/jasypt-1.9.4.jar!/" />
+      <root url="jar://E:/software/java/apache-maven-3.6.0/Maven_Repo/com/melloware/jasypt/1.9.4/jasypt-1.9.4.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/com/melloware/jasypt/1.9.4/jasypt-1.9.4-javadoc.jar!/" />
+      <root url="jar://E:/software/java/apache-maven-3.6.0/Maven_Repo/com/melloware/jasypt/1.9.4/jasypt-1.9.4-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/com/melloware/jasypt/1.9.4/jasypt-1.9.4-sources.jar!/" />
+      <root url="jar://E:/software/java/apache-maven-3.6.0/Maven_Repo/com/melloware/jasypt/1.9.4/jasypt-1.9.4-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
