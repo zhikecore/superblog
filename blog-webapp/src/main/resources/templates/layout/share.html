@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<!-- 通过自有函数输出HTML头部信息 -->
+<meta name="description" content="superblog">
+<meta name="keywords" content="互联网,大数据,C#,blog,hadoop,elasticsearch">
+
+<body>
+
+<!--begin #share-->
+<div th:fragment="common_share" id="share_div" class="clearfix">
+
+    <link rel="stylesheet" href="/assets/share_js/css/share.min.css">
+    <script src="/assets/share_js/js/jquery.share.min.js"></script>
+
+    <div class="clearfix">
+        <div class="pull-right action-buttons">
+            <div class="space-4"></div>
+
+            <input id="articleId" type="text" th:value="${article.Id}" hidden="hidden">
+
+            <div>
+                <a href="javascript:void(0);" id="read" style="text-decoration:none;" class="grey">
+                    <i class="ace-icon fa fa-eye bigger-120"></i>
+                    在看 (<i class="read-num" th:text="${article.ScanNum}"></i>)
+                </a>
+
+                <a href="javascript:void(0);" id="like" style="text-decoration:none;"
+                   th:classappend="${article.isLiked} ? red : grey">
+                    <i class=" ace-icon fa fa-thumbs-up bigger-120"></i>
+                    赞 (<i class="like-num" th:text="${article.LikeNum}"></i>)
+                </a>
+                <a href="javascript:void(0);" id="share" style="text-decoration:none;">
+                </a>
+            </div>
+            <div class="space-4"></div>
+            <!--错误消息展示-->
+            <div class="alert alert-danger" id="errorMsg" style="display: none;">
+            </div>
+        </div>
+    </div>
+
+    <!--业务js-->
+    <script src="/assets/js/articleDetail.js"></script>
+</div>
+<!-- end #share -->
+
+</body>
+
+</html>

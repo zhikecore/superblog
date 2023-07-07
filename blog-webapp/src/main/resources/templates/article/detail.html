@@ -1,68 +1,152 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:layout="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/layout">
+<html lang="en" xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="layout/layout">
 <head>
     <meta charset="UTF-8">
     <title>文章详情页面</title>
-    <link href="/assets/css/github-markdown.css" rel="stylesheet" />
+    <link href="/assets/css/github-markdown.css" rel="stylesheet"/>
     <style>
-	.markdown-body {
-		box-sizing: border-box;
-		min-width: 200px;
-		max-width: 980px;
-		margin: 0 auto;
-		padding: 45px;
-	}
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
 
-	@media (max-width: 767px) {
-		.markdown-body {
-			padding: 15px;
-		}
-	}
-</style>
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
 
-<style>
-.btn-copy{
-    position: relative;
-    top: 0px;
-    float:right;
-    cursor: pointer;
-    height: 20px;
-    width:70px;
-    text-align: center;
-    padding: 1px 8px;
-    color: #212529;
-    font-size: .9em;
-    background-color: rgba(224, 224, 224, 0.2);
-    border-radius: 10px;
-    transition: opacity 1.5s;
-    opacity: 0;
-}
-pre:hover .btn-copy{opacity: 1;transition-duration: 1s;}
 
-</style>
 
-<!--代码复制-->
-<script src="/assets/js/clipboard.min.js"></script>
-<script src="/assets/js/copy.min.js"></script>
 
-<!--代码高亮-->
-<link rel="stylesheet" href="/assets/highlight-v11.6.0/styles/default.min.css">
-<script src="/assets/highlight-v11.6.0/highlight.min.js"></script>
-<script>
-hljs.highlightAll();
-</script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+    <style>
+    .btn-copy{
+        position: relative;
+        top: 0px;
+        float:right;
+        cursor: pointer;
+        height: 20px;
+        width:70px;
+        text-align: center;
+        padding: 1px 8px;
+        color: #212529;
+        font-size: .9em;
+        background-color: rgba(224, 224, 224, 0.2);
+        border-radius: 10px;
+        transition: opacity 1.5s;
+        opacity: 0;
+    }
+    pre:hover .btn-copy{opacity: 1;transition-duration: 1s;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+    <!--代码复制-->
+    <script src="/assets/js/clipboard.min.js"></script>
+    <script src="/assets/js/copy.min.js"></script>
+
+    <!--代码高亮-->
+    <link rel="stylesheet" href="/assets/highlight-v11.6.0/styles/default.min.css">
+    <script src="/assets/highlight-v11.6.0/highlight.min.js"></script>
+    <script>
+    hljs.highlightAll();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
 </head>
 
 <body>
 
-<div layout:fragment="content" >
+<div layout:fragment="content">
     <div class="page-content">
         <div class="page-content-area">
             <article class="markdown-body">
-              <div th:utext="${article.content}"></div>
+                <div th:utext="${article.content}"></div>
+                <div th:include="layout/share :: common_share" class="pull-right action-buttons"></div>
             </article>
         </div>
+        <!--        <div class="pull-right action-buttons">-->
+        <!--            <div th:include="layout/share :: common_share"></div>-->
+        <!--        </div>-->
+        <!--        <div th:include="layout/share :: common_share" class="pull-right action-buttons"></div>-->
     </div>
 </div>
 </body>

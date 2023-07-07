@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:layout="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <meta charset="UTF-8">
 <!-- 通过自有函数输出HTML头部信息 -->
 <meta name="description" content="superblog">
@@ -8,11 +8,11 @@
 <head>
 
     <!-- 不使用 CDN-->
-<!--    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />-->
-<!--    <link href="/assets/css/font-awesome.min.css" rel="stylesheet" />-->
+    <!--    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />-->
+    <!--    <link href="/assets/css/font-awesome.min.css" rel="stylesheet" />-->
 
-<!--    <script src="/assets/js/jquery-2.2.1.min.js"></script>-->
-<!--    <script src="/assets/js/bootstrap.min.js"></script>-->
+    <!--    <script src="/assets/js/jquery-2.2.1.min.js"></script>-->
+    <!--    <script src="/assets/js/bootstrap.min.js"></script>-->
 
     <style type="text/css">
         .user-info {
@@ -35,6 +35,8 @@
             border: 2px solid #FFF;
             max-width: 40px;
         }
+
+
     </style>
 </head>
 
@@ -43,9 +45,11 @@
 <!--&lt;!&ndash;begin #header-->
 <header th:fragment="common_header" id="header" class="clearfix">
     <nav class="navbar navbar-expand-md navbar-dark  bg-dark">
-<!--        <a class="navbar-brand" href="/">Superblog</a>-->
-        <img style="margin: -4px 8px 0 0;border-radius: 100%;border: 2px solid #FFF;max-width: 40px;"  src="../../avatars/logo2.png" alt="Jason's Photo">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!--        <a class="navbar-brand" href="/">Superblog</a>-->
+        <img style="margin: -4px 8px 0 0;border-radius: 100%;border: 2px solid #FFF;max-width: 40px;"
+             src="../../avatars/logo2.png" alt="Jason's Photo">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -73,8 +77,10 @@
                 <a class="nav-link" th:href="@{/account/register}" th:if="${session.aname == null}">注册</a>
             </li>
             <li class="nav-item dropdown" th:if="${session.aname != null}">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img style="margin: -4px 8px 0 0;border-radius: 100%;border: 2px solid #FFF;max-width: 40px;"  src="../../avatars/user.jpg" alt="Jason's Photo">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    <img style="margin: -4px 8px 0 0;border-radius: 100%;border: 2px solid #FFF;max-width: 40px;"
+                         src="../../avatars/user.jpg" alt="Jason's Photo">
                     <span class="user-info">
 						<small>欢迎您,</small>
 						<div th:text="${session.aname}"></div>
@@ -84,8 +90,8 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">个人中心</a>
                     <a class="dropdown-item" th:href="@{/account/logout}">退出登录</a>
-<!--                    <div class="dropdown-divider"></div>-->
-<!--                    <a class="dropdown-item" href="#">Something else here</a>-->
+                    <!--                    <div class="dropdown-divider"></div>-->
+                    <!--                    <a class="dropdown-item" href="#">Something else here</a>-->
                 </div>
             </li>
         </ul>

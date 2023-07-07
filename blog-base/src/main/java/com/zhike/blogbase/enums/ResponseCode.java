@@ -31,6 +31,16 @@ public enum ResponseCode {
      */
     SERVER_DEFAULT_ERROR("500", "服务器异常"),
 
+    /**
+     * 未授权
+     */
+    //UN_AUTHORIZED("401", "未授权"),
+    UN_AUTHORIZED("401", "请登录!"),
+
+    /**
+     * 已点过赞
+     */
+    HAS_LIKED("1001", "您已经赞过!"),
     ;
     @EnumValue
     private final String code;

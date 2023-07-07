@@ -148,6 +148,4 @@ public class Article implements Serializable {
 
     @TableField("ModifyTime")
     private LocalDateTime ModifyTime;
-
-
 }

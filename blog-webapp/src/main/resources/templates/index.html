@@ -19,6 +19,22 @@
         }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </style>
     <style>
         /* Make the image fully responsive */
@@ -51,6 +67,22 @@
         }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </style>
 
     <style>
@@ -64,6 +96,22 @@
             color: red;
             border: 1px solid red;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     </style>
@@ -153,7 +201,7 @@
 
                             <th:block th:each="carousel:${carousels}">
 
-                                <div  th:class="${carousel.CarouselItemCls}">
+                                <div th:class="${carousel.CarouselItemCls}">
                                     <a th:href="${carousel.Link}"><img th:src="${carousel.Cover}"></a>
 
                                     <div class="carousel-caption">
@@ -181,13 +229,36 @@
 
             <div class="row">
                 <div class="col-md-12 col-xs-12">
+                    <!--                    <form class="form-inline my-2 my-lg-0" method="get" action="/">-->
+                    <!--                        <input class="form-control mr-sm-2" type="search" name="title" placeholder="Search" aria-label="Search"-->
+                    <!--                               th:value="${article.title}">-->
+                    <!--                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>-->
+                    <!--                        <hr/>-->
+                    <!--                    </form>-->
                     <form class="form-inline my-2 my-lg-0" method="get" action="/">
-                        <input class="form-control mr-sm-2" type="search" name="title" placeholder="Search" aria-label="Search"
+                        <!--                        <input class="form-control mr-sm-2" type="search" name="title" placeholder="Search"-->
+                        <!--                               aria-label="Search"-->
+                        <!--                               th:value="${article.title}">-->
+                        <!--                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>-->
+                        <!--                        <hr/>-->
+
+                        <input placeholder="Search" type="text" class="form-control" name="message" aria-label="Search"
                                th:value="${article.title}">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
-                        <hr/>
+                        <span class="input-group-btn">
+						<button class="btn btn-sm btn-grey no-radius" type="submit">
+								<i class="ace-icon fa fa-search"></i>搜索
+						</button>
+						</span>
                     </form>
-<!--                    <a th:href="@{/default/export}" class="btn btn-info" th:value="导出excel">导出</a>-->
+                    <!--                    <div class="input-group">-->
+                    <!--                        <input placeholder="Type your message here ..." type="text" class="form-control" name="message">-->
+                    <!--                        <span class="input-group-btn">-->
+                    <!--						<button class="btn btn-sm btn-info no-radius" type="button">-->
+                    <!--								<i class="ace-icon fa fa-share"></i>Send-->
+                    <!--						</button>-->
+                    <!--						</span>-->
+                    <!--                    </div>-->
+                    <!--                    <a th:href="@{/default/export}" class="btn btn-info" th:value="导出excel">导出</a>-->
                 </div><!-- end #main-->
 
             </div>
@@ -216,16 +287,20 @@
                                             <time th:datetime="${article.CreateTime}" itemprop="datePublished"
                                                   th:value="${article.CreateTime}"></time>
                                         </li>
-                                        <li itemprop="author" itemscope="" itemtype="#">作者： <a itemprop="name" href="#"
-                                                                                               rel="author">麦子</a></li>
+                                        <li itemprop="author" itemscope="" itemtype="#">作者： <a itemprop="name"
+                                                                                                 href="#"
+                                                                                                 rel="author">麦子</a>
+                                        </li>
                                         <li>分类： <a href="#">.NET</a></li>
-                                        <li itemprop="interactionCount"><a itemprop="discussionUrl" href="#" title="浏览"><i
+                                        <li itemprop="interactionCount"><a itemprop="discussionUrl" href="#"
+                                                                           title="浏览"><i
                                                 class="icon-eye-open" th:text="${article.ScanNum}"></i> </a></li>
                                         <li itemprop="interactionCount"><a itemprop="discussionUrl" href="#"
                                                                            title="赞"><i class="icon-thumbs-up"
-                                                                                        th:text="${article.LikeNum}"></i></a>
+                                                                                         th:text="${article.LikeNum}"></i></a>
                                         </li>
-                                        <li itemprop="interactionCount"><a itemprop="discussionUrl" href="#" title="评论"><i
+                                        <li itemprop="interactionCount"><a itemprop="discussionUrl" href="#"
+                                                                           title="评论"><i
                                                 class="icon-comment" th:text="${article.CommentNum}"></i></a></li>
                                         <li class="float-right"><a th:href="${article.LinkUrl}"
                                                                    class="float-right">阅读全文</a></li>
@@ -309,10 +384,10 @@
                     </section>
 
                 </div><!-- end #sidebar -->
-<!--                <a class="to-top"-->
-<!--                   style="z-index: 1200; cursor: pointer; position: fixed; right: 15px; bottom: 30px; display: none;">-->
-<!--                    <img src="/assets/img/top.svg" alt="返回顶部" title="返回顶部">-->
-<!--                </a>-->
+                <!--                <a class="to-top"-->
+                <!--                   style="z-index: 1200; cursor: pointer; position: fixed; right: 15px; bottom: 30px; display: none;">-->
+                <!--                    <img src="/assets/img/top.svg" alt="返回顶部" title="返回顶部">-->
+                <!--                </a>-->
             </div>
 
         </div>

@@ -7,13 +7,16 @@
     <file url="file://$PROJECT_DIR$/blog-base/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blog-dao" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blog-dao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blog-dao/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blog-manager" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blog-manager/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blog-manager/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blog-pojo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blog-pojo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blog-pojo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blog-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blog-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blog-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blog-webapi" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blog-webapi/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blog-webapi/src/main/resources" charset="UTF-8" />

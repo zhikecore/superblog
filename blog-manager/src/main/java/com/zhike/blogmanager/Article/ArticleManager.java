@@ -12,6 +12,7 @@ import com.zhike.blogpojo.AO.ArticleAO;
 import com.zhike.blogpojo.DO.Adminuser;
 import com.zhike.blogpojo.DO.Article;
 import com.zhike.blogpojo.VO.ArticleVO;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -36,7 +37,8 @@ import java.util.stream.Collectors;
  * ArticleManager at 2022/1/16 21:17,code by JeffreyHu
  * You can contact author with zhikecore@foxmail.com.
  */
-@Service
+//@Service
+@Component
 public class ArticleManager {
 
     @Autowired
@@ -45,7 +47,7 @@ public class ArticleManager {
     @Autowired
     private AdminuserMapper adminuserMapper;
 
-    public Adminuser findById(long id)
+    public Adminuser findById(Integer id)
     {
         QueryWrapper<Adminuser> queryWrapper = new QueryWrapper<>();
         queryWrapper.lambda().eq(Adminuser::getId, id);
@@ -58,6 +60,18 @@ public class ArticleManager {
         return adminuser;
     }
 
+    public Adminuser findByAccount(String account)
+    {
+        QueryWrapper<Adminuser> queryWrapper = new QueryWrapper<>();
+        queryWrapper.lambda().eq(Adminuser::getAccount,account);
+
+        Adminuser adminuser =adminuserMapper.selectOne(queryWrapper);
+        if (adminuser == null) {
+            throw new BizException("用户不存在!");
+        }
+
+        return adminuser;
+    }
     public IPage<ArticleVO> searchByPage(long start, long size, long articleTypeId)
     {
         Page<Article> page=new Page<>(start,size);

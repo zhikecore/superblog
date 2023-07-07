@@ -17,15 +17,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="blog-base" target="1.8" />
-      <module name="blog-dao" target="1.8" />
-      <module name="blog-manager" target="1.8" />
-      <module name="blog-pojo" target="1.8" />
-      <module name="blog-service" target="1.8" />
-      <module name="blog-webapi" target="1.8" />
-      <module name="blog-webapp" target="1.8" />
       <module name="blog-webapp-admin" target="1.8" />
-      <module name="super-blog" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

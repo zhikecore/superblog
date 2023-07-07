@@ -1,11 +1,14 @@
 package com.zhike.blogbase.utils;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.TypeReference;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.Set;
 
 /**
  * Copyright (C) 2022  智客工坊(52interview.com)
@@ -53,5 +56,27 @@ public class JsonUtil {
         }
         return pojo;
 
+    }
+
+    /**
+     * 序列化
+     *
+     * @param object 序列化对象
+     * @return
+     */
+    public static String serialize(Object object) {
+        return JSON.toJSONString(object);
+    }
+
+    /**
+     * Set反序列化
+     *
+     * @param jsonStr 序列化结果
+     * @param clazz 泛型class类
+     * @return
+     */
+    public static <T> Set<T> deserializeToSet(String jsonStr, Class<T> clazz) {
+        return JSON.parseObject(jsonStr, new TypeReference<Set<T>>(clazz) {
+        });
     }
 }

@@ -111,6 +111,8 @@ public class ArticleVO implements Serializable {
 
     private Integer ForwardNum;
 
+    private Boolean isLiked=false;
+
     /**
      * 是否软删除
      */
