@@ -22,6 +22,20 @@ import javax.servlet.http.HttpSession;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Copyright (C) 2023  智客工坊(52interview.com)
+ * The SpringBoot Super-blog Project.
+ * All rights reserved.
+ * <p>
+ * > Github地址: https://github.com/zhikecore/superblog.git
+ * > 教程地址: https://www.52interview.com/book/36
+ * > 智客工坊社区：https://www.52interview.com/
+ * <p>
+ * 智客工坊(52interview.com) - 经验创造价值,分享成就未来。
+ * <p>
+ * ArticleController at 2023/07/06 11:29,code by JeffreyHu
+ * You can contact author with zhikecore@foxmail.com.
+ */
 @Api(tags = "文章点赞")
 @RestController
 @RequestMapping("/articleLike")
