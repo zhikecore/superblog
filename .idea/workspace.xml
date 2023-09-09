@@ -10,9 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ae31778-6eaa-495d-acee-85c1070b8d45" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/AboutUsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/ArticleLikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/ArticleLikeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/aop/ArticleParamsConvertAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/aop/ArticleParamsConvertAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/ContributeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/ContributeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/DefaultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/DefaultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/job/SyncArticleDataFromRedis2MysqlJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/job/SyncArticleDataFromRedis2MysqlJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/contribute/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/contribute/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,8 +182,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="E:\software\java\apache-maven-3.6.0\Maven_Repo" />
-        <option name="userSettingsFile" value="E:\software\java\apache-maven-3.6.0\conf\settings.xml" />
+        <option name="localRepository" value="E:\SoftWare\java\apache-maven-3.6.0\Maven_Repo" />
+        <option name="userSettingsFile" value="E:\softwares\java\apache-maven-3.6.0\conf\settings_meb.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -280,17 +289,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/projects/java/like-article/pom.xml&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;google-java-format.settings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/projects/java/superblog",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.zhike.blogwebapi.Models" />
@@ -704,7 +713,7 @@
       <breakpoints>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java</url>
-          <line>203</line>
+          <line>208</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -1069,12 +1078,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java</url>
-          <line>228</line>
+          <line>233</line>
           <option name="timeStamp" value="228" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java</url>
-          <line>229</line>
+          <line>234</line>
           <option name="timeStamp" value="229" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -1146,6 +1155,11 @@
           <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/ArticleLikeController.java</url>
           <line>107</line>
           <option name="timeStamp" value="258" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/DefaultController.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="259" />
         </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleTypeServiceImpl.java</url>

@@ -34,7 +34,7 @@ public class ContributeController {
     @RequestMapping("/index")//主页
     @IgnoreAuth
     public String index(){
-        return "/contribute/index";
+        return "contribute/index";
     }
 
     @WelcomeRecord()

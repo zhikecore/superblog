@@ -41,7 +41,7 @@ public class ArticleParamsConvertAspect {
 //        }
 
         Object[] args = proceedingJoinPoint.getArgs();
-        System.out.println("before==getArgs:"+ JsonUtil.toJson(args));
+        //System.out.println("before==getArgs:"+ JsonUtil.toJson(args));
         //修改指定参数
         for (Object arg : args) {
             if (arg instanceof ArticleByUserIdBo){
@@ -52,7 +52,7 @@ public class ArticleParamsConvertAspect {
         }
 
         try {
-            System.out.println("after==getArgs:"+ JsonUtil.toJson(args));
+            //System.out.println("after==getArgs:"+ JsonUtil.toJson(args));
             proceedingJoinPoint.proceed(args);
         } catch (Throwable throwable) {
             throwable.printStackTrace();

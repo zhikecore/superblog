@@ -137,11 +137,16 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper,Article> imple
     public IPage<ArticleVO> searchByPage(long start, long size, String name)
     {
         Page<Article> page=new Page<>(start,size);
-        QueryWrapper<Article> queryWrapper=new QueryWrapper<>();
-        if(StringUtils.isNotBlank(name))
-            queryWrapper.like("title", "%"+name+"%");
+//        QueryWrapper<Article> queryWrapper=new QueryWrapper<>();
+//        if(StringUtils.isNotBlank(name))
+//            queryWrapper
+//                    .eq("IsSoftDelete",false)
+//                    .like("title", "%"+name+"%");
 
-        IPage<Article> pagedResource=articleMapper.selectPage(page,queryWrapper);
+        IPage<Article> pagedResource=articleMapper.selectPage(page,
+                new LambdaQueryWrapper<Article>()
+                .eq(Article::getIsSoftDelete,false)
+                .like(StringUtil.isNotEmpty(name),Article::getTitle, name));
 
         //参数一是当前页，参数二是每页个数
         //IPage<Article> page = new Page<>(1, 5);

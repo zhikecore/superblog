@@ -32,7 +32,7 @@ public class SyncArticleDataFromRedis2MysqlJob {
     @Scheduled(cron = "0/10 * * * * ?")//10s 执行一次
 //    @Scheduled(cron = "0 37 19 * * ?")//每天零点执行
     public void run() throws Exception {
-        log.info("开始redis文章点赞数据同步!");
+        //log.info("开始redis文章点赞数据同步!");
 
         //1.更新文章总的点赞数
         Map<Object, Object> articleCountMap = redisUtils.hmget(RedisKeyConstant.ARTICLE_LIKED_USERS);
@@ -46,7 +46,7 @@ public class SyncArticleDataFromRedis2MysqlJob {
             synchronizeTotalLikeCount(articleId, userIdSet);
         }
 
-        log.info("完成redis文章点赞数据同步!");
+        //log.info("完成redis文章点赞数据同步!");
     }
 
     /**

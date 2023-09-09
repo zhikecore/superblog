@@ -35,6 +35,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
@@ -66,6 +67,7 @@ import java.util.stream.Collectors;
  * DefaultController at 2022/01/16 18:25,code by JeffreyHu
  * You can contact author with zhikecore@foxmail.com.
  */
+//@Controller
 @Controller
 //@RequestMapping("/default")
 @RequestMapping("/")
@@ -92,11 +94,11 @@ public class DefaultController {
 
         log.debug("debug:default index...");
         log.info("info: access to default index 为主页!");
-        log.error("error:default index...");
+        //log.error("error:default index...");
 
-        System.out.println("before:"+article.getTitle());
-        String title = request.getParameter("title");
-        System.out.println("after:"+title);
+//        System.out.println("before:"+article.getTitle());
+//        String title = request.getParameter("title");
+//        System.out.println("after:"+title);
 
         //封装值到AO
 
@@ -106,7 +108,8 @@ public class DefaultController {
 
         //定义一个视图对象名字时index.html  前缀和后缀都有封装,只需要写名字
         //ModelAndView modelAndView = new ModelAndView("default/index");
-        ModelAndView modelAndView = new ModelAndView("/index");
+        //ModelAndView modelAndView = new ModelAndView("/index");
+        ModelAndView modelAndView = new ModelAndView("index");
         IPage<ArticleVO> page=articleService.searchByPage(pageNum,pageSize,article.getTitle());
 
         //相当于setAttriute("pageInfo",pageInfo)
