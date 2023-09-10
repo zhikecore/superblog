@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class ArticleByUserIdBo {
-    private long userid;
-    private String  username;
+    private long userId;
+    private String  userName;
 }

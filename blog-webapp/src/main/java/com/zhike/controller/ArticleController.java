@@ -10,6 +10,7 @@ import com.zhike.blogbase.utils.JsonUtil;
 import com.zhike.blogbase.utils.RedisUtils;
 import com.zhike.blogbase.utils.ServletUtil;
 import com.zhike.blogmanager.Article.ArticleManager;
+import com.zhike.blogmanager.User.UserManager;
 import com.zhike.blogpojo.DO.Adminuser;
 import com.zhike.blogpojo.DTO.input.ArticleLikeDto;
 import com.zhike.blogpojo.DTO.input.ArticleUnLikeDto;
@@ -59,6 +60,7 @@ public class ArticleController {
     @Resource
     private ArticleManager articleManager;
 
+    @Resource private  UserManager userManager;
     @Resource
     private RedisUtils redisUtils;
 
@@ -68,7 +70,7 @@ public class ArticleController {
         log.debug("debug:article index...");
         HttpSession session =  ServletUtil.getRequest().getSession();
         String account = (String) session.getAttribute("aname");
-        Adminuser loginUser=articleManager.findByAccount(account);
+        Adminuser loginUser=userManager.findByAccount(account);
 
         //定义一个视图对象名字时index.html  前缀和后缀都有封装,只需要写名字
         ModelAndView modelAndView = new ModelAndView("article/detail");

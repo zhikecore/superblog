@@ -7,6 +7,7 @@ import com.zhike.blogbase.utils.JsonUtil;
 import com.zhike.blogbase.utils.RedisUtils;
 import com.zhike.blogbase.utils.ServletUtil;
 import com.zhike.blogmanager.Article.ArticleManager;
+import com.zhike.blogmanager.User.UserManager;
 import com.zhike.blogpojo.DO.Adminuser;
 import com.zhike.blogpojo.DTO.input.ArticleLikeDto;
 import com.zhike.blogpojo.DTO.input.ArticleUnLikeDto;
@@ -46,6 +47,8 @@ public class ArticleLikeController {
     @Resource
     private ArticleManager articleManager;
 
+    @Resource private UserManager userManager;
+
     @Resource
     private RedisUtils redisUtils;
 
@@ -58,7 +61,7 @@ public class ArticleLikeController {
         {
             HttpSession session =  ServletUtil.getRequest().getSession();
             String account = (String) session.getAttribute("aname");
-            Adminuser loginUser=articleManager.findByAccount(account);
+            Adminuser loginUser=userManager.findByAccount(account);
             if(loginUser==null)
             {
                 result.setSuccess(false);
@@ -109,7 +112,7 @@ public class ArticleLikeController {
         {
             HttpSession session =  ServletUtil.getRequest().getSession();
             String account = (String) session.getAttribute("aname");
-            Adminuser loginUser=articleManager.findByAccount(account);
+            Adminuser loginUser=userManager.findByAccount(account);
 
             String key=RedisKeyConstant.ARTICLE_LIKED_USERS;
             String itemKey=dto.getArticleId().toString();
@@ -144,7 +147,7 @@ public class ArticleLikeController {
         {
             HttpSession session =  ServletUtil.getRequest().getSession();
             String account = (String) session.getAttribute("aname");
-            Adminuser loginUser=articleManager.findByAccount(account);
+            Adminuser loginUser=userManager.findByAccount(account);
             if(loginUser==null)
             {
                 result.setSuccess(false);

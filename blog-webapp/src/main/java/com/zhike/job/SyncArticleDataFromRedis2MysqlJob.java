@@ -29,8 +29,8 @@ public class SyncArticleDataFromRedis2MysqlJob {
     @Resource
     private RedisUtils redisUtils;
 
-    @Scheduled(cron = "0/10 * * * * ?")//10s 执行一次
-//    @Scheduled(cron = "0 37 19 * * ?")//每天零点执行
+    @Scheduled(cron = "0 0/10 * * * ?")//10min 执行一次
+//    @Scheduled(cron = "0/10 * * * * ?")//10s 执行一次
     public void run() throws Exception {
         //log.info("开始redis文章点赞数据同步!");
 

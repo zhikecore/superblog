@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.meb.im.hospital.dao.mapper.HospitalChatMapper">
+<mapper namespace="com.zhike.blogdao.mapper.ArticleMapper">
 
     <!--根据username获取文章列表-->
     <select id="listArticleByUserId" resultType="com.zhike.blogpojo.BO.ArticleByUserIdBo">

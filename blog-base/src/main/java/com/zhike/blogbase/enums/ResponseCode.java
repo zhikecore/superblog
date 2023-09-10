@@ -41,6 +41,15 @@ public enum ResponseCode {
      * 已点过赞
      */
     HAS_LIKED("1001", "您已经赞过!"),
+
+    /**
+     * 已收藏
+     */
+    HAS_FORKED("1002", "您已收藏过!"),
+    /**
+     * 收藏成功
+     */
+    FORKED_OK("1003", "收藏成功!"),
     ;
     @EnumValue
     private final String code;

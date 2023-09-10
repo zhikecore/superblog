@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhike.blogdao.mapper.MyFavoritesMapper">
+
+    <!--我的收藏文章列表-->
+    <select id="listMyForkedArticle" resultType="com.zhike.blogpojo.VO.ArticleVO">
+        SELECT t1.* FROM `article`t1
+        INNER JOIN `my_favorites` t2
+        ON t1.`Id`=t2.`ArticleId`
+        WHERE 1=1
+        <if test="queryParams.userId != null">
+            AND t2.`UserId`=#{queryParams.userId}
+        </if>
+    </select>
+
+</mapper>

@@ -66,7 +66,7 @@ public class TestController  {
 //        }
 
         ArticleByUserIdBo bo=new ArticleByUserIdBo();
-        bo.setUsername("jeffreyHu");
+        bo.setUserName("jeffreyHu");
         articleService.listArticleByUserId(bo);
         return "/test/index";
     }

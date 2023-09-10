@@ -20,6 +20,10 @@
             <input id="articleId" type="text" th:value="${article.Id}" hidden="hidden">
 
             <div>
+                <a href="javascript:void(0);" id="fork" style="text-decoration:none;" class="grey">
+                    <i class="ace-icon fa fa-star bigger-120"></i>
+                    收藏
+                </a>
                 <a href="javascript:void(0);" id="read" style="text-decoration:none;" class="grey">
                     <i class="ace-icon fa fa-eye bigger-120"></i>
                     在看 (<i class="read-num" th:text="${article.ScanNum}"></i>)
@@ -34,6 +38,10 @@
                 </a>
             </div>
             <div class="space-4"></div>
+            <!--错误消息展示-->
+            <div class="alert alert-success" id="noticeMsg" style="display: none;">
+            </div>
+
             <!--错误消息展示-->
             <div class="alert alert-danger" id="errorMsg" style="display: none;">
             </div>

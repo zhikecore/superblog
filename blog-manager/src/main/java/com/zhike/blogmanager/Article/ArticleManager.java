@@ -44,34 +44,34 @@ public class ArticleManager {
     @Autowired
     private ArticleMapper articleMapper;
 
-    @Autowired
-    private AdminuserMapper adminuserMapper;
-
-    public Adminuser findById(Integer id)
-    {
-        QueryWrapper<Adminuser> queryWrapper = new QueryWrapper<>();
-        queryWrapper.lambda().eq(Adminuser::getId, id);
-
-        Adminuser adminuser =adminuserMapper.selectOne(queryWrapper);
-        if (adminuser == null) {
-            throw new BizException("用户不存在!");
-        }
-
-        return adminuser;
-    }
-
-    public Adminuser findByAccount(String account)
-    {
-        QueryWrapper<Adminuser> queryWrapper = new QueryWrapper<>();
-        queryWrapper.lambda().eq(Adminuser::getAccount,account);
-
-        Adminuser adminuser =adminuserMapper.selectOne(queryWrapper);
-        if (adminuser == null) {
-            throw new BizException("用户不存在!");
-        }
-
-        return adminuser;
-    }
+//    @Autowired
+//    private AdminuserMapper adminuserMapper;
+//
+//    public Adminuser findById(Integer id)
+//    {
+//        QueryWrapper<Adminuser> queryWrapper = new QueryWrapper<>();
+//        queryWrapper.lambda().eq(Adminuser::getId, id);
+//
+//        Adminuser adminuser =adminuserMapper.selectOne(queryWrapper);
+//        if (adminuser == null) {
+//            throw new BizException("用户不存在!");
+//        }
+//
+//        return adminuser;
+//    }
+//
+//    public Adminuser findByAccount(String account)
+//    {
+//        QueryWrapper<Adminuser> queryWrapper = new QueryWrapper<>();
+//        queryWrapper.lambda().eq(Adminuser::getAccount,account);
+//
+//        Adminuser adminuser =adminuserMapper.selectOne(queryWrapper);
+//        if (adminuser == null) {
+//            throw new BizException("用户不存在!");
+//        }
+//
+//        return adminuser;
+//    }
     public IPage<ArticleVO> searchByPage(long start, long size, long articleTypeId)
     {
         Page<Article> page=new Page<>(start,size);

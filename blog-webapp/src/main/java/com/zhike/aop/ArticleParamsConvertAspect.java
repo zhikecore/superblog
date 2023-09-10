@@ -46,7 +46,7 @@ public class ArticleParamsConvertAspect {
         for (Object arg : args) {
             if (arg instanceof ArticleByUserIdBo){
                 ArticleByUserIdBo bo = (ArticleByUserIdBo) arg;
-                bo.setUserid(1);
+                bo.setUserId(1);
                 arg=bo;
             }
         }

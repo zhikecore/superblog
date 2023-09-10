@@ -10,8 +10,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ae31778-6eaa-495d-acee-85c1070b8d45" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/blog-dao/src/main/java/com/zhike/blogdao/mapper/MyFavoritesMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-manager/src/main/java/com/zhike/blogmanager/User/UserManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-pojo/src/main/java/com/zhike/blogpojo/DO/MyFavorites.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-pojo/src/main/java/com/zhike/blogpojo/DTO/input/ArticleForkDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/MyFavoriteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/MyFavoriteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/ArticleForkController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/MyFavoritesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-base/src/main/java/com/zhike/blogbase/enums/ResponseCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-base/src/main/java/com/zhike/blogbase/enums/ResponseCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-dao/src/main/resources/mapper/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-dao/src/main/resources/mapper/ArticleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-manager/src/main/java/com/zhike/blogmanager/Article/ArticleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-manager/src/main/java/com/zhike/blogmanager/Article/ArticleManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-pojo/src/main/java/com/zhike/blogpojo/BO/ArticleByUserIdBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-pojo/src/main/java/com/zhike/blogpojo/BO/ArticleByUserIdBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/aop/ArticleParamsConvertAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/aop/ArticleParamsConvertAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/ArticleLikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/ArticleLikeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/job/SyncArticleDataFromRedis2MysqlJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/job/SyncArticleDataFromRedis2MysqlJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/static/assets/js/articleDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/static/assets/js/articleDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/article/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/article/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/share.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/share.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +63,9 @@
         <option value="XML File " />
         <option value="Enum" />
         <option value="FxmlFile" />
-        <option value="Interface" />
         <option value="HTML File" />
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -279,17 +300,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/projects/java/superblog",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/projects/java/superblog&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.zhike.blogwebapi.Models" />
@@ -703,7 +724,7 @@
       <breakpoints>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java</url>
-          <line>208</line>
+          <line>203</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -738,12 +759,12 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java</url>
-          <line>129</line>
+          <line>124</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java</url>
-          <line>117</line>
+          <line>112</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -888,12 +909,12 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java</url>
-          <line>81</line>
+          <line>76</line>
           <option name="timeStamp" value="144" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java</url>
-          <line>98</line>
+          <line>93</line>
           <option name="timeStamp" value="145" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -1003,17 +1024,17 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java</url>
-          <line>90</line>
+          <line>85</line>
           <option name="timeStamp" value="182" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java</url>
-          <line>89</line>
+          <line>84</line>
           <option name="timeStamp" value="183" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java</url>
-          <line>94</line>
+          <line>89</line>
           <option name="timeStamp" value="184" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -1068,12 +1089,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java</url>
-          <line>233</line>
+          <line>228</line>
           <option name="timeStamp" value="228" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java</url>
-          <line>234</line>
+          <line>229</line>
           <option name="timeStamp" value="229" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -1143,13 +1164,38 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/ArticleLikeController.java</url>
-          <line>107</line>
+          <line>110</line>
           <option name="timeStamp" value="258" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/DefaultController.java</url>
           <line>98</line>
           <option name="timeStamp" value="259" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/MyFavoritesController.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="260" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/MyFavoritesController.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="261" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/MyFavoriteServiceImpl.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="262" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/MyFavoritesController.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="263" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/MyFavoriteServiceImpl.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="264" />
         </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleTypeServiceImpl.java</url>
