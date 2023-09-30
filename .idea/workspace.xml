@@ -10,29 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ae31778-6eaa-495d-acee-85c1070b8d45" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/blog-dao/src/main/java/com/zhike/blogdao/mapper/MyFavoritesMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-manager/src/main/java/com/zhike/blogmanager/User/UserManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-pojo/src/main/java/com/zhike/blogpojo/DO/MyFavorites.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-pojo/src/main/java/com/zhike/blogpojo/DTO/input/ArticleForkDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/MyFavoriteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/MyFavoriteServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/ArticleForkController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/MyFavoritesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-admin/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-admin/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/java/com/zhike/blogadmin/BlogWebAdminApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/java/com/zhike/blogadmin/controller/ArticleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/resources/templates/545" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-base/src/main/java/com/zhike/blogbase/enums/ResponseCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-base/src/main/java/com/zhike/blogbase/enums/ResponseCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-dao/src/main/resources/mapper/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-dao/src/main/resources/mapper/ArticleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-manager/src/main/java/com/zhike/blogmanager/Article/ArticleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-manager/src/main/java/com/zhike/blogmanager/Article/ArticleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-pojo/src/main/java/com/zhike/blogpojo/BO/ArticleByUserIdBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-pojo/src/main/java/com/zhike/blogpojo/BO/ArticleByUserIdBo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-service/src/main/java/com/zhike/blogservice/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/aop/ArticleParamsConvertAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/aop/ArticleParamsConvertAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/ArticleLikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/ArticleLikeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/job/SyncArticleDataFromRedis2MysqlJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/java/com/zhike/job/SyncArticleDataFromRedis2MysqlJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/static/assets/js/articleDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/static/assets/js/articleDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/article/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/article/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/share.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-webapp/src/main/resources/templates/layout/share.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,17 +288,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/projects/java/superblog&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/projects/java/superblog",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.zhike.blogwebapi.Models" />
@@ -323,6 +312,7 @@
       <recent name="E:\JavaProjects\superblog\blog-webapp\src\main\resources\templates\contribute" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\java\superblog\blog-admin\src\main\resources\templates" />
       <recent name="D:\projects\java\superblog\blog-webapp\src\main\resources\templates\layout" />
       <recent name="D:\projects\java\superblog\blog-dao\src\main\resources\mapper" />
       <recent name="E:\JavaProjects\superblog\blog-webapp\src\main\resources" />

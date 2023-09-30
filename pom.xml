@@ -11,7 +11,8 @@
 		<module>blog-manager</module>
 		<module>blog-base</module>
 		<module>blog-webapp</module>
-		<!--<module>blog-webapp-admin</module>-->
+        <module>blog-admin</module>
+        <!--<module>blog-webapp-admin</module>-->
 <!--		<module>blog-webapi</module>-->
 	</modules>
     <parent>

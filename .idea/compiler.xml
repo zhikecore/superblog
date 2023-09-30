@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="blog-webapi" />
+        <module name="blog-admin" />
         <module name="blog-dao" />
         <module name="blog-pojo" />
         <module name="blog-manager" />
@@ -22,6 +23,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="blog-admin" options="-parameters" />
       <module name="blog-base" options="-parameters" />
       <module name="blog-dao" options="-parameters" />
       <module name="blog-manager" options="-parameters" />
