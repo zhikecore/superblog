@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Super Blog 管理后台</title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="superblog">
+    <meta name="keywords" content="互联网,大数据,C#,blog,hadoop,elasticsearch">
+
+    <!-- css -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/assets/css/docs.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <style>
+        .bd-navbar {
+            background-color: #393939;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"
+     th:include="layout/header :: common_header"></div>
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <!--sidebar-->
+        <div th:include="layout/sidebar :: common_sidebar"
+             class="col-12 col-md-3 col-xl-2 bd-sidebar"></div>
+        <!--body-->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            <div layout:fragment="content"></div>
+        </main>
+    </div>
+</div>
+
+</body>
+
+<!--java script-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.0/assets/js/vendor/jquery-slim.min.js"><\/script>')
+
+
+
+
+
+</script>
+
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+</html>

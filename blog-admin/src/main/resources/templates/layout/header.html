@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<!-- 通过自有函数输出HTML头部信息 -->
+<meta name="description" content="superblog">
+<meta name="keywords" content="互联网,大数据,C#,blog,hadoop,elasticsearch">
+<body>
+<!--header-->
+<header th:fragment="common_header" id="header">
+    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+        <img style="margin: -4px 8px 0 0;border-radius: 100%;border: 2px solid #FFF;max-width: 40px;"
+             src="../../avatars/logo2.png" alt="Jason's Photo">
+        <small>
+            <b>SuperBlog Admin</b>
+        </small>
+    </a>
+
+    <ul class="navbar-nav  flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/account/login}" th:if="${session.aname == null}">登录</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/account/register}" th:if="${session.aname == null}">注册</a>
+        </li>
+        <li class="nav-item dropdown" th:if="${session.aname != null}">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+                <img style="margin: -4px 8px 0 0;border-radius: 100%;border: 2px solid #FFF;max-width: 40px;"
+                     src="../../avatars/user.jpg" alt="Jason's Photo">
+                <span class="user-info">
+						<small>欢迎您,</small>
+						<div th:text="${session.aname}"></div>
+					</span>
+                <i class="ace-icon fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">个人中心</a>
+                <a class="dropdown-item" th:href="@{/account/logout}">退出登录</a>
+            </div>
+        </li>
+    </ul>
+
+</header>
+
+<!-- end #header -->
+
+</body>
+
+</html>

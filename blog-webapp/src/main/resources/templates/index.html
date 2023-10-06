@@ -35,6 +35,7 @@
 
 
 
+
     </style>
     <style>
         /* Make the image fully responsive */
@@ -83,6 +84,7 @@
 
 
 
+
     </style>
 
     <style>
@@ -96,6 +98,7 @@
             color: red;
             border: 1px solid red;
         }
+
 
 
 
@@ -241,14 +244,17 @@
                         <!--                               th:value="${article.title}">-->
                         <!--                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>-->
                         <!--                        <hr/>-->
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input placeholder="Search" type="text" class="form-control" name="message"
+                                   aria-label="Search"
+                                   th:value="${article.title}">
+                            <!--                            <span class="input-group-btn">-->
+                        </div>
 
-                        <input placeholder="Search" type="text" class="form-control" name="message" aria-label="Search"
-                               th:value="${article.title}">
-                        <span class="input-group-btn">
-						<button class="btn btn-sm btn-grey no-radius" type="submit">
-								<i class="ace-icon fa fa-search"></i>搜索
-						</button>
-						</span>
+                        <button class="btn btn-sm btn-grey no-radius" type="submit">
+                            <i class="ace-icon fa fa-search"></i>搜索
+                        </button>
+                        </span>
                     </form>
                     <!--                    <div class="input-group">-->
                     <!--                        <input placeholder="Type your message here ..." type="text" class="form-control" name="message">-->

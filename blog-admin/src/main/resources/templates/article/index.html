@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="layout/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>文章列表</title>
+    <style>
+        .page-item {
+            padding: 1px 5px;
+            border: 1px solid #afafaf;
+            margin-left: 3px
+        }
+
+        .page-item.active {
+            color: red;
+            border: 1px solid red;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+<div layout:fragment="content">
+    <div class="page-content">
+        <div class="page-content-area">
+            <div class="breadcrumbs" id="breadcrumbs">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">首页</a></li>
+                        <li class="breadcrumb-item"><a href="#">文章管理</a></li>
+                        <!--                        <li class="breadcrumb-item active" aria-current="page">列表</li>-->
+                    </ol>
+                </nav>
+            </div>
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="space-10"></div>
+
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <form class="form-inline my-2 my-lg-0" method="get" action="/article/index">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+                                   th:value="${article.title}">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2"><i class="ace-icon fa fa-search"></i>搜索
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row mt-3"></div>
+
+            <div class="row">
+                <div class="col-md-8 col-xs-12 " id="main" role="main">
+                    <div id="list_articles">
+
+                        <!--for循环绑定到表格上-->
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr class="table-row">
+                                    <th scope="col"><input type="checkbox"/></th>
+                                    <th scope="col">标签</th>
+                                    <th scope="col">标题</th>
+                                    <th scope="col">禁用</th>
+                                    <th scope="col">创建时间</th>
+                                    <th scope="col">修改时间</th>
+                                    <th scope="col">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="article:${page?.records}" class="table-row">
+                                    <td><input type="checkbox" class="check"></td>
+                                    <td style="width:100px;" th:text="${article.Tags}"></td>
+                                    <td style="width:250px;" th:text="${article.Title}"></td>
+                                    <!--值转换显示-->
+                                    <td style="width:100px;" th:text="${article.IsSoftDelete}==0?'否':'是'"></td>
+                                    <!--日期转换-->
+                                    <!--<td th:text="${#dates.format(article.CreateTime, 'yyyy-MM-dd HH:mm:ss')}"></td>-->
+                                    <td style="width:200px;"
+                                        th:text="${#temporals.format(article.CreateTime,'yyyy-MM-dd HH:mm:ss')}"></td>
+                                    <td style="width:200px;"
+                                        th:text="${#temporals.format(article.ModifyTime,'yyyy-MM-dd HH:mm:ss')}"></td>
+                                    <!--<td th:text="${#dates.format(article.ModifyTime, 'yyyy-MM-dd HH:mm:ss')}"></td>-->
+
+                                    <td style="width:200px;">
+                                        <!--                                        <button type="button" class="btn btn-default">修改</button>-->
+                                        <a class='green' href='#' data-original-title='修改'
+                                           data-placement='bottom' data-rel='tooltip'><i
+                                                class='fa fa-pencil bigger-120'></i></a>
+                                        <a class='green' href='#' data-original-title='删除'
+                                           data-placement='bottom' data-rel='tooltip'><i
+                                                class='fa fa-trash-o bigger-120'></i></a>
+                                        <!--                                        <button type="button" class="btn btn-default">删除</button>-->
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <!--将分页的页面包含-->
+                    <div style="float: left" th:if="${page.pages>0}">
+                        当前第<span th:text="${page.current}"></span>页,共<span
+                            th:text="${page.pages}"></span>页,总记录数<span th:text="${page.total}"></span>
+                    </div>
+                    <div style="float: right" th:if="${page.pages>0}">
+                        <a th:href="'/article/index?pageNum=1'" th:text="首页" th:if="${page.current>1}"
+                           th:class="page-item"></a>
+                        <a th:href="'/article/index?pageNum=' + ${page?.current-1}" th:text="上一页"
+                           th:class="page-item"
+                           th:if="${page.current>1}"></a>
+
+                        <a th:href="'/article/index?pageNum=' + ${i}"
+                           th:each="i :${#numbers.sequence(1, page.pages)}" th:text="${i}"
+                           th:class="${page.current == i}? 'page-item active' :'page-item' "></a>
+
+                        <a th:href="'/article/index?pageNum=' +(${page.current+1})" th:text="下一页"
+                           th:class="page-item"
+                           th:if="${page.current<page.pages}"></a>
+
+                        <a th:href="'/article/index?pageNum=' + ${page.pages}" th:class="page-item"
+                           th:if="${page.current<page.pages}">尾页</a>
+                    </div>
+
+
+                </div><!-- end #main-->
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

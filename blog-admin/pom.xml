@@ -7,23 +7,6 @@
         <artifactId>super-blog</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <!--    <artifactId>blog-admin</artifactId>-->
-    <!--    <packaging>war</packaging>-->
-    <!--    <name>blog-admin Maven Webapp</name>-->
-    <!--    <url>http://maven.apache.org</url>-->
-    <!--    <dependencies>-->
-    <!--        <dependency>-->
-    <!--            <groupId>junit</groupId>-->
-    <!--            <artifactId>junit</artifactId>-->
-    <!--            <version>3.8.1</version>-->
-    <!--            <scope>test</scope>-->
-    <!--        </dependency>-->
-    <!--    </dependencies>-->
-    <!--    <build>-->
-    <!--        <finalName>blog-admin</finalName>-->
-    <!--    </build>-->
-
-
     <groupId>com.zhike</groupId>
     <artifactId>blog-admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -99,6 +82,19 @@
             <artifactId>jquery</artifactId>
             <version>3.1.1</version>
         </dependency>
+        <!--thymeleaf热加载工具-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-java8time</artifactId>
+            <version>3.0.0.RELEASE</version>
+        </dependency>
+
     </dependencies>
 
     <!--打包方式1-->
