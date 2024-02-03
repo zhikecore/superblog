@@ -6,7 +6,10 @@ import com.zhike.blogbase.annotation.ArticleParamsConvert;
 import com.zhike.blogbase.result.PagedResult;
 import com.zhike.blogpojo.AO.ArticleAO;
 import com.zhike.blogpojo.BO.ArticleByUserIdBo;
+import com.zhike.blogpojo.BO.ArticleCreateBo;
+import com.zhike.blogpojo.BO.ArticleUpdateBo;
 import com.zhike.blogpojo.DO.Article;
+import com.zhike.blogpojo.DTO.input.ArticleCreateDto;
 import com.zhike.blogpojo.VO.ArticleVO;
 import org.apache.ibatis.annotations.Param;
 
@@ -43,4 +46,7 @@ public interface ArticleService extends IService<Article> {
 
    @ArticleParamsConvert()
    List<ArticleVO> listArticleByUserId(ArticleByUserIdBo bo);
+   void create(ArticleCreateBo bo);
+
+   void modify(ArticleUpdateBo bo);
 }

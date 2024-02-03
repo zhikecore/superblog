@@ -1,4 +1,4 @@
-package com.zhike.Interceptor;
+package com.zhike.blogadmin.Interceptor;
 
 import com.zhike.blogbase.annotation.EnableAuth;
 import com.zhike.blogbase.annotation.IgnoreAuth;

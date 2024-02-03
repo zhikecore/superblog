@@ -28,10 +28,8 @@
                 <img style="margin: -4px 8px 0 0;border-radius: 100%;border: 2px solid #FFF;max-width: 40px;"
                      src="../../avatars/user.jpg" alt="Jason's Photo">
                 <span class="user-info">
-						<small>欢迎您,</small>
-						<div th:text="${session.aname}"></div>
-					</span>
-                <i class="ace-icon fa fa-caret-down"></i>
+						<small>欢迎您,</small><b th:text="${session.aname}" th:value="${session.aname}"></b>
+				</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">个人中心</a>

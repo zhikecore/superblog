@@ -1,6 +1,6 @@
 package com.zhike.blogadmin.config;
 
-import com.zhike.Interceptor.AuthHandlerInterceptor;
+import com.zhike.blogadmin.Interceptor.AuthHandlerInterceptor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;

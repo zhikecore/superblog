@@ -3,13 +3,16 @@ package com.zhike.blogpojo.DO;
 
 import java.time.LocalDateTime;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
+import java.util.Date;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 /**
@@ -95,6 +98,9 @@ public class Article implements Serializable {
     @TableField("Content")
     private String Content;
 
+    @TableField("MdContent")
+    private String MdContent;
+
     /**
      * 是否置顶:0为否，1为是
      */
@@ -143,9 +149,11 @@ public class Article implements Serializable {
     @TableField("Description")
     private String Description;
 
-    @TableField("CreateTime")
-    private LocalDateTime CreateTime;
+    @TableField(value = "CreateTime",fill = FieldFill.INSERT)
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date CreateTime;
 
-    @TableField("ModifyTime")
-    private LocalDateTime ModifyTime;
+    @TableField(value = "ModifyTime",fill = FieldFill.INSERT_UPDATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date ModifyTime;
 }

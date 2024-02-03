@@ -138,7 +138,15 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.4.0</version>
         </dependency>
-		
+
+        <!--markdown2html-->
+        <dependency>
+            <groupId>com.atlassian.commonmark</groupId>
+            <artifactId>commonmark</artifactId>
+            <version>0.17.0</version>
+        </dependency>
+
+
         <!--<dependency>-->
         <!--<groupId>commons-httpclient</groupId>-->
         <!--<artifactId>commons-httpclient</artifactId>-->

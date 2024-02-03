@@ -3,17 +3,24 @@ package com.zhike.blogservice.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zhike.blogbase.annotation.ArticleParamsConvert;
 import com.zhike.blogbase.exception.BizException;
 import com.zhike.blogbase.result.PagedResult;
 import com.zhike.blogbase.utils.BeanHelper;
+import com.zhike.blogbase.utils.MarkdownParseUtil;
 import com.zhike.blogbase.utils.StringUtil;
 import com.zhike.blogdao.mapper.ArticleMapper;
+import com.zhike.blogdao.mapper.ArticleTypeMapper;
 import com.zhike.blogpojo.AO.ArticleAO;
 import com.zhike.blogpojo.BO.ArticleByUserIdBo;
+import com.zhike.blogpojo.BO.ArticleCreateBo;
+import com.zhike.blogpojo.BO.ArticleUpdateBo;
 import com.zhike.blogpojo.DO.Article;
+import com.zhike.blogpojo.DO.ArticleType;
+import com.zhike.blogpojo.DTO.input.ArticleCreateDto;
 import com.zhike.blogpojo.VO.ArticleVO;
 import com.zhike.blogservice.ArticleService;
 import org.springframework.beans.BeanUtils;
@@ -44,6 +51,11 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper,Article> imple
 
     @Autowired
     private ArticleMapper articleMapper;
+
+    @Autowired
+    private ArticleTypeMapper articleTypeMapper;
+
+    private MarkdownParseUtil markdownParseUtil;
 
     @Override
     public String test() {
@@ -230,4 +242,65 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper,Article> imple
         return  articles;
     }
 
+    @Override
+    public void create(ArticleCreateBo bo)
+    {
+       try{
+           String html=MarkdownParseUtil.parseHtml(bo.getMdContent());
+           bo.setContent(html);
+
+           ArticleType articleType=articleTypeMapper.selectOne(Wrappers.<ArticleType>lambdaQuery()
+                   .eq(ArticleType::getId, bo.getArticleTypeId()));
+           if(articleType!=null)
+           {
+              bo.setArticleTypeId(articleType.getId());
+              bo.setArticleTypeName(articleType.getName());
+           }
+
+           Article article = BeanHelper.convertBean(bo, Article::new);
+           articleMapper.insert(article);
+       }catch(Exception exception)
+       {
+           throw new BizException("创建文章失败，请重试！");
+       }
+    }
+
+    @Override
+    public void modify(ArticleUpdateBo bo)
+    {
+        try{
+            Article article=articleMapper.selectOne(Wrappers.<Article>lambdaQuery()
+                    .eq(Article::getId, bo.getId()));
+            if(article==null)
+            {
+                throw new BizException("该文章不存在，请检查！");
+            }
+
+            String html=MarkdownParseUtil.parseHtml(bo.getMdContent());
+            bo.setContent(html);
+
+            ArticleType articleType=articleTypeMapper.selectOne(Wrappers.<ArticleType>lambdaQuery()
+                    .eq(ArticleType::getId, bo.getArticleTypeId()));
+            if(articleType!=null)
+            {
+                bo.setArticleTypeId(articleType.getId());
+                bo.setArticleTypeName(articleType.getName());
+            }
+
+            //修改
+            article.setArticleTypeId(bo.getArticleTypeId());
+            article.setArticleTypeName(bo.getArticleTypeName());
+            article.setTagIds(bo.getTagIds());
+            article.setTitle(bo.getTitle());
+            article.setLinkUrl(bo.getLinkUrl());
+            article.setCover(bo.getCover());
+            article.setContent(bo.getContent());
+            article.setSummary(bo.getSummary());
+            article.setDescription(bo.getDescription());
+            articleMapper.updateById(article);
+        }catch(Exception exception)
+        {
+            throw new BizException("创建文章失败，请重试！");
+        }
+    }
 }

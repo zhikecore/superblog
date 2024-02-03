@@ -112,7 +112,7 @@ public class Adminuser implements Serializable {
     private Timestamp createTime;
 
     @TableField(value = "ModifyTime",fill = FieldFill.INSERT_UPDATE)
-    private Timestamp updateTime;
+    private Timestamp ModifyTime;
 
 
 }

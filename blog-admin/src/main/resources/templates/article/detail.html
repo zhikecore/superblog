@@ -3,7 +3,7 @@
       layout:decorator="layout/layout">
 <head>
     <meta charset="UTF-8">
-    <title>文章详情页面</title>
+    <title>文章详情</title>
     <link href="/assets/css/github-markdown.css" rel="stylesheet"/>
     <style>
         .markdown-body {
@@ -19,12 +19,6 @@
                 padding: 15px;
             }
         }
-
-
-
-
-
-
 
     </style>
 
@@ -48,6 +42,12 @@
     pre:hover .btn-copy{opacity: 1;transition-duration: 1s;}
 
 
+
+
+
+
+
+
     </style>
 
     <!--代码复制-->
@@ -61,6 +61,7 @@
     hljs.highlightAll();
 
 
+
     </script>
 </head>
 
@@ -69,6 +70,17 @@
 <div layout:fragment="content">
     <div class="page-content">
         <div class="page-content-area">
+            <div class="breadcrumbs" id="breadcrumbs">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">首页</a></li>
+                        <li class="breadcrumb-item"><a href="/article/index">文章管理</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">详情</li>
+                    </ol>
+                </nav>
+            </div>
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="space-10"></div>
             <article class="markdown-body">
                 <div th:utext="${article.content}"></div>
                 <div th:include="layout/share :: common_share" class="pull-right action-buttons"></div>

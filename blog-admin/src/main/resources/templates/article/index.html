@@ -19,6 +19,9 @@
 
 
 
+
+
+
     </style>
 </head>
 
@@ -40,7 +43,7 @@
             <div class="space-10"></div>
 
             <div class="row">
-                <div class="col-md-12 col-xs-12">
+                <div class="col-md-8 col-xs-12">
                     <form class="form-inline my-2 my-lg-0" method="get" action="/article/index">
                         <div class="form-group mx-sm-3 mb-2">
                             <input type="text" class="form-control" placeholder="Search" aria-label="Search"
@@ -49,6 +52,16 @@
                         <button type="submit" class="btn btn-primary mb-2"><i class="ace-icon fa fa-search"></i>搜索
                         </button>
                     </form>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <a href="/article/create" class="btn btn-primary mb-2">
+                        <i class="ace-icon fa fa-plus"></i>
+                        新增
+                    </a>
+                    <a href="/article/Create" class="btn btn-primary mb-2">
+                        <i class="ace-icon fa fa-trash-o"></i>
+                        批量删除
+                    </a>
                 </div>
             </div>
 
@@ -80,22 +93,24 @@
                                     <!--值转换显示-->
                                     <td style="width:100px;" th:text="${article.IsSoftDelete}==0?'否':'是'"></td>
                                     <!--日期转换-->
-                                    <!--<td th:text="${#dates.format(article.CreateTime, 'yyyy-MM-dd HH:mm:ss')}"></td>-->
                                     <td style="width:200px;"
-                                        th:text="${#temporals.format(article.CreateTime,'yyyy-MM-dd HH:mm:ss')}"></td>
+                                        th:text="${#dates.format(article.CreateTime,'yyyy-MM-dd HH:mm:ss')}"></td>
                                     <td style="width:200px;"
-                                        th:text="${#temporals.format(article.ModifyTime,'yyyy-MM-dd HH:mm:ss')}"></td>
-                                    <!--<td th:text="${#dates.format(article.ModifyTime, 'yyyy-MM-dd HH:mm:ss')}"></td>-->
+                                        th:text="${#dates.format(article.ModifyTime,'yyyy-MM-dd HH:mm:ss')}"></td>
 
                                     <td style="width:200px;">
-                                        <!--                                        <button type="button" class="btn btn-default">修改</button>-->
-                                        <a class='green' href='#' data-original-title='修改'
+                                        <a class='green' th:href="@{'/article/detail/'+${article.Id}}"
+                                           data-original-title='详情'
+                                           data-placement='bottom' data-rel='tooltip'><i
+                                                class='fa fa fa-search-plus bigger-120'></i></a>
+                                        <a class='green' th:href="@{'/article/modify/'+${article.Id}}"
+                                           data-original-title='修改'
                                            data-placement='bottom' data-rel='tooltip'><i
                                                 class='fa fa-pencil bigger-120'></i></a>
-                                        <a class='green' href='#' data-original-title='删除'
+                                        <a class='green' th:href="@{'/article/delete/'+${article.Id}}"
+                                           data-original-title='删除'
                                            data-placement='bottom' data-rel='tooltip'><i
                                                 class='fa fa-trash-o bigger-120'></i></a>
-                                        <!--                                        <button type="button" class="btn btn-default">删除</button>-->
                                     </td>
                                 </tr>
                                 </tbody>

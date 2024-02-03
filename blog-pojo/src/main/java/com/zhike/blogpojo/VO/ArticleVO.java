@@ -5,9 +5,11 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.zhike.blogpojo.DO.Article;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * Copyright (C) 2022  智客工坊(52interview.com)
@@ -120,9 +122,11 @@ public class ArticleVO implements Serializable {
 
     private String Description;
 
-    private LocalDateTime CreateTime;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date CreateTime;
 
-    private LocalDateTime ModifyTime;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date ModifyTime;
 
     //private  String TypeName;
 
