@@ -2,6 +2,9 @@ package com.zhike.blogbase.exception;
 
 import com.zhike.blogbase.enums.ResponseCode;
 import com.zhike.blogbase.result.ResponseResult;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.DuplicateKeyException;
+import org.springframework.dao.IncorrectResultSizeDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -85,6 +88,22 @@ public class GlobalExceptionHandler {
             result.setMsg(errorMessages);
             result.setCode(ResponseCode.BUSINESS_DEFAULT_ERROR.getCode());
             return result;
+        }
+
+        //拦截表示违反数据库的完整性约束导致的异常。
+        if(exception instanceof DataIntegrityViolationException)
+        {
+            DataIntegrityViolationException error = (DataIntegrityViolationException) exception;
+            result.setMsg(error.getMessage());
+            result.setCode(ResponseCode.BUSINESS_DEFAULT_ERROR.getCode());
+        }
+
+        //拦截表示违反数据库的完整性约束导致的异常。
+        if(exception instanceof DuplicateKeyException)
+        {
+            DataIntegrityViolationException error = (DataIntegrityViolationException) exception;
+            result.setMsg(error.getMessage());
+            result.setCode(ResponseCode.DUPLICATE_KEY_ERROR.getCode());
         }
 
         result.setCode(ResponseCode.SERVER_DEFAULT_ERROR.getCode());

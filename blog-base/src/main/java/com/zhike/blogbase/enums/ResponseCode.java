@@ -50,6 +50,15 @@ public enum ResponseCode {
      * 收藏成功
      */
     FORKED_OK("1003", "收藏成功!"),
+    /**
+     * 违反数据库的完整性约束导致的异常
+     */
+    DATA_INTEGRITY_VIOLATION("1004", "违反数据库的完整性约束导致的异常!"),
+    /**
+     * 违反数据库的完整性约束导致的异常
+     */
+    DUPLICATE_KEY_ERROR("1004", "数据库插入重复Key!"),
+
     ;
     @EnumValue
     private final String code;
