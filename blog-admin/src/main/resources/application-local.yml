@@ -1,0 +1,100 @@
+server:
+  port: 7071
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000        #最大并发数
+    max-connections: 20000   #接受和处理的最大连接数
+    acceptCount: 700         #可以放到处理队列中的请求数
+  max-http-header-size: 64KB
+spring:
+  application:
+    name: blog-admin
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    mapper:
+      ACCEPT_CASE_INSENSITIVE_ENUMS: true
+      accept-case-insensitive-properties: true
+  datasource:
+    url: jdbc:mysql://ec2-161-189-70-43.cn-northwest-1.compute.amazonaws.com.cn:3336/meb_im?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useAffectedRows=true&useSSL=false
+    username: root
+    password: nvfoFPR4hnQZfeGkCwBN
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    druid:
+      initial-size: 20
+      min-idle: 20
+      max-active: 200
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 30000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-return: false
+      test-on-borrow: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: -1
+      use-global-data-source-stat: true
+      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+  redis:
+    enabled: true
+    host: 52.83.220.237
+    #port: 6371
+    port: 6377
+    password: 2CoWeKafdweEz2Dz560L9
+    database: 2
+    timeout: 10000
+    connectionPoolSize: 15
+    connectionMinimumIdleSize: 5
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 200MB
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  type-enums-package: com.meb.im.common.enums
+  global-config:
+    db-config:
+      id-type: AUTO #默认自增
+  configuration:
+    mapUnderscoreToCamelCase: false
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  level:
+    root: ERROR
+    org.springframework.web: ERROR
+    com.meb.im.client: INFO
+    com.meb.im.dao.mapper: INFO
+
+upload:
+  qiniu:
+    domain: "https://devcdn.meb.com"
+    access-key: "IAM-q9VIORhbVrcvpAMMJPHx6SHMEhpBPwtRTQZydrd_"
+    secret-key: "ekhRClMrGfT1ABfojMbaf3VrO7N8FeEc55G-j1u83Mjw"
+    bucket: "meb-dev"
+    enableRecognition: true
+    deleteSleepTime: 5
+    videoBucket: "meb-dev"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #暴露所有节点
+      base-path: /
+    health:
+      sensitive: false #关闭过滤敏感信息
+  endpoint:
+    health:
+      show-details: always  #显示详细信息
+  health:
+    mail:
+      enabled: false

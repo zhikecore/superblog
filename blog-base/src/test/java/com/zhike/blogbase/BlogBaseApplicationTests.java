@@ -1,13 +1,14 @@
 package com.zhike.blogbase;
 
-import org.junit.jupiter.api.Test;
+
 import org.springframework.boot.test.context.SpringBootTest;
+
+import org.junit.jupiter.api.Test;
 
 @SpringBootTest
 class BlogBaseApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
-
+    @Test
+    void contextLoads() {
+    }
 }

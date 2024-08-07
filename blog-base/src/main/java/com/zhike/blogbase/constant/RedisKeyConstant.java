@@ -16,4 +16,7 @@ package com.zhike.blogbase.constant;
  */
 public class RedisKeyConstant {
     public static final String ARTICLE_LIKED_USERS = "superblog:article:liked:userIds";
+    /**
+     * 获取七牛token的redis分布式锁的key
+     */
 }

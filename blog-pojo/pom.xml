@@ -1,170 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>com.zhike</groupId>
-		<artifactId>super-blog</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.zhike</groupId>
+        <artifactId>super-blog</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
 
-	<groupId>com.zhike</groupId>
-	<artifactId>blog-pojo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <groupId>com.zhike</groupId>
+    <artifactId>blog-pojo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-	<name>blog-pojo</name>
-	<description>Demo project for Spring Boot</description>
+    <name>blog-pojo</name>
+    <description>Demo project for Spring Boot</description>
 
-	<properties>
-		<java.version>1.8</java.version>
-	</properties>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
 
-	<dependencies>
+    <dependencies>
 
-		<!-- 添加 demo-base 的依赖 -->
-		<dependency>
-			<groupId>com.zhike</groupId>
-			<artifactId>blog-base</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<!--<scope>compile</scope>-->
-		</dependency>
+        <!-- 添加 demo-base 的依赖 -->
+        <dependency>
+            <groupId>com.zhike</groupId>
+            <artifactId>blog-base</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <!--<scope>compile</scope>-->
+        </dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-		</dependency>
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.boot</groupId>-->
-			<!--<artifactId>spring-boot-starter-test</artifactId>-->
-			<!--<scope>test</scope>-->
-		<!--</dependency>-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-test</artifactId>-->
+        <!--<scope>test</scope>-->
+        <!--</dependency>-->
 
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.boot</groupId>-->
-			<!--<artifactId>spring-boot-starter-jdbc</artifactId>-->
-		<!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-jdbc</artifactId>-->
+        <!--</dependency>-->
 
-		<!--&lt;!&ndash;mysql&ndash;&gt;-->
-		<!--<dependency>-->
-			<!--<groupId>mysql</groupId>-->
-			<!--<artifactId>mysql-connector-java</artifactId>-->
-			<!--<version>5.1.41</version>-->
-		<!--</dependency>-->
+        <!--&lt;!&ndash;mysql&ndash;&gt;-->
+        <!--<dependency>-->
+        <!--<groupId>mysql</groupId>-->
+        <!--<artifactId>mysql-connector-java</artifactId>-->
+        <!--<version>5.1.41</version>-->
+        <!--</dependency>-->
 
-		<!--&lt;!&ndash; https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter &ndash;&gt;-->
-		<!--<dependency>-->
-			<!--<groupId>com.baomidou</groupId>-->
-			<!--<artifactId>mybatis-plus-boot-starter</artifactId>-->
-			<!--<version>3.4.0</version>-->
-		<!--</dependency>-->
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter &ndash;&gt;-->
+        <!--<dependency>-->
+        <!--<groupId>com.baomidou</groupId>-->
+        <!--<artifactId>mybatis-plus-boot-starter</artifactId>-->
+        <!--<version>3.4.0</version>-->
+        <!--</dependency>-->
 
-		<dependency>
-			<groupId>com.github.xiaoymin</groupId>
-			<artifactId>knife4j-spring-boot-starter</artifactId>
-			<version>2.0.5</version>
-		</dependency>
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+            <version>2.0.5</version>
+        </dependency>
 
-		<dependency>
-			<groupId>org.hibernate.validator</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>6.1.6.Final</version>
-		</dependency>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.1.6.Final</version>
+        </dependency>
 
-		<!--http 相关组件引用-->
-		<!--<dependency>-->
-			<!--<groupId>org.apache.httpcomponents</groupId>-->
-			<!--<artifactId>httpclient</artifactId>-->
-			<!--<version>4.5.6</version>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-			<!--<groupId>org.apache.httpcomponents</groupId>-->
-			<!--<artifactId>httpcore</artifactId>-->
-			<!--<version>4.4.10</version>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-			<!--<groupId>org.apache.httpcomponents</groupId>-->
-			<!--<artifactId>httpmime</artifactId>-->
-			<!--<version>4.5.6</version>-->
-		<!--</dependency>-->
+        <!--http 相关组件引用-->
+        <!--<dependency>-->
+        <!--<groupId>org.apache.httpcomponents</groupId>-->
+        <!--<artifactId>httpclient</artifactId>-->
+        <!--<version>4.5.6</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>org.apache.httpcomponents</groupId>-->
+        <!--<artifactId>httpcore</artifactId>-->
+        <!--<version>4.4.10</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>org.apache.httpcomponents</groupId>-->
+        <!--<artifactId>httpmime</artifactId>-->
+        <!--<version>4.5.6</version>-->
+        <!--</dependency>-->
 
-		<!--easypoi-->
-		<!--<dependency>-->
-			<!--<groupId>cn.afterturn</groupId>-->
-			<!--<artifactId>easypoi-base</artifactId>-->
-			<!--<version>3.2.0</version>-->
-		<!--</dependency>-->
+        <!--easypoi-->
+        <!--<dependency>-->
+        <!--<groupId>cn.afterturn</groupId>-->
+        <!--<artifactId>easypoi-base</artifactId>-->
+        <!--<version>3.2.0</version>-->
+        <!--</dependency>-->
 
-		<!--EasyPoi导入导出-->
-		<!--<dependency>-->
-			<!--<groupId>cn.afterturn</groupId>-->
-			<!--<artifactId>easypoi-spring-boot-starter</artifactId>-->
-			<!--<version>4.2.0</version>-->
-		<!--</dependency>-->
+        <!--EasyPoi导入导出-->
+        <!--<dependency>-->
+        <!--<groupId>cn.afterturn</groupId>-->
+        <!--<artifactId>easypoi-spring-boot-starter</artifactId>-->
+        <!--<version>4.2.0</version>-->
+        <!--</dependency>-->
 
-		<!--<dependency>-->
-			<!--<groupId>cn.afterturn</groupId>-->
-			<!--<artifactId>easypoi-spring-boot-starter</artifactId>-->
-			<!--<version>4.1.2</version>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-			<!--<groupId>cn.afterturn</groupId>-->
-			<!--<artifactId>easypoi-base</artifactId>-->
-			<!--<version>4.1.2</version>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-			<!--<groupId>cn.afterturn</groupId>-->
-			<!--<artifactId>easypoi-web</artifactId>-->
-			<!--<version>4.1.2</version>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-			<!--<groupId>cn.afterturn</groupId>-->
-			<!--<artifactId>easypoi-annotation</artifactId>-->
-			<!--<version>4.1.2</version>-->
-		<!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>cn.afterturn</groupId>-->
+        <!--<artifactId>easypoi-spring-boot-starter</artifactId>-->
+        <!--<version>4.1.2</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>cn.afterturn</groupId>-->
+        <!--<artifactId>easypoi-base</artifactId>-->
+        <!--<version>4.1.2</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>cn.afterturn</groupId>-->
+        <!--<artifactId>easypoi-web</artifactId>-->
+        <!--<version>4.1.2</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>cn.afterturn</groupId>-->
+        <!--<artifactId>easypoi-annotation</artifactId>-->
+        <!--<version>4.1.2</version>-->
+        <!--</dependency>-->
 
-		<!--数据库加密-->
-		<dependency>
-			<groupId>com.github.ulisesbocchio</groupId>
-			<artifactId>jasypt-spring-boot-starter</artifactId>
-			<version>2.1.1</version>
-		</dependency>
+        <!--数据库加密-->
+        <dependency>
+            <groupId>com.github.ulisesbocchio</groupId>
+            <artifactId>jasypt-spring-boot-starter</artifactId>
+            <version>2.1.1</version>
+        </dependency>
 
-		<!-- 引入 redis 依赖 -->
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.boot</groupId>-->
-			<!--<artifactId>spring-boot-starter-data-redis</artifactId>-->
-		<!--</dependency>-->
+        <!-- 引入 redis 依赖 -->
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-data-redis</artifactId>-->
+        <!--</dependency>-->
 
-		<!-- aop依赖 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-aop</artifactId>
-		</dependency>
+        <!-- aop依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
 
-		<!-- 文件上传 -->
-		<!--<dependency>-->
-			<!--<groupId>commons-fileupload</groupId>-->
-			<!--<artifactId>commons-fileupload</artifactId>-->
-			<!--<version>1.3.1</version>-->
-		<!--</dependency>-->
+        <!-- 文件上传 -->
+        <!--<dependency>-->
+        <!--<groupId>commons-fileupload</groupId>-->
+        <!--<artifactId>commons-fileupload</artifactId>-->
+        <!--<version>1.3.1</version>-->
+        <!--</dependency>-->
 
-		<!--<dependency>-->
-			<!--<groupId>com.baomidou</groupId>-->
-			<!--<artifactId>mybatis-plus-generator</artifactId>-->
-			<!--<version>3.3.2</version>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-			<!--<groupId>com.baomidou</groupId>-->
-			<!--<artifactId>mybatis-plus-annotation</artifactId>-->
-			<!--<version>3.3.0</version>-->
-		<!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>com.baomidou</groupId>-->
+        <!--<artifactId>mybatis-plus-generator</artifactId>-->
+        <!--<version>3.3.2</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>com.baomidou</groupId>-->
+        <!--<artifactId>mybatis-plus-annotation</artifactId>-->
+        <!--<version>3.3.0</version>-->
+        <!--</dependency>-->
 
-	</dependencies>
+    </dependencies>
 
 </project>
