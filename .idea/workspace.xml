@@ -10,27 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ae31778-6eaa-495d-acee-85c1070b8d45" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/java/com/zhike/blogadmin/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/java/com/zhike/blogadmin/config/UploadManagerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/java/com/zhike/blogadmin/controller/UploadController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-base/src/main/java/com/zhike/blogbase/utils/QiNiuYun/QiNiuUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-base/src/main/java/com/zhike/blogbase/utils/QiNiuYun/model/GetQiNiuTokenDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-base/src/main/java/com/zhike/blogbase/utils/QiNiuYun/property/QiNiuProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-pojo/src/main/java/com/zhike/blogpojo/AO/GetQiNiuTokenAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-pojo/src/main/java/com/zhike/blogpojo/DTO/input/ReqFileUploadTokenDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-pojo/src/main/java/com/zhike/blogpojo/VO/RespMediaTokenVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-pojo/src/main/java/com/zhike/blogpojo/VO/RespUploadMediaVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/java/com/zhike/blogadmin/config/RedissonConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/com/zhike/blogadmin/BlogWebAdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/com/zhike/blogadmin/BlogWebAdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-base/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-base/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-base/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/com/zhike/blogadmin/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/com/zhike/blogadmin/controller/TestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-base/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-base/src/main/java/com/zhike/blogbase/constant/RedisKeyConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-base/src/main/java/com/zhike/blogbase/constant/RedisKeyConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-base/src/test/java/com/zhike/blogbase/BlogBaseApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-base/src/test/java/com/zhike/blogbase/BlogBaseApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-pojo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-pojo/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1293,7 +1276,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/blog-admin/src/main/java/com/zhike/blogadmin/controller/TestController.java</url>
-          <line>21</line>
+          <line>32</line>
           <option name="timeStamp" value="311" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
