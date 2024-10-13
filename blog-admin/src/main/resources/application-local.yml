@@ -1,5 +1,5 @@
 server:
-  port: 7071
+  port: 8081
   tomcat:
     uri-encoding: UTF-8
     max-threads: 1000        #最大并发数
@@ -16,35 +16,18 @@ spring:
       ACCEPT_CASE_INSENSITIVE_ENUMS: true
       accept-case-insensitive-properties: true
   datasource:
-    url: jdbc:mysql://ec2-161-189-70-43.cn-northwest-1.compute.amazonaws.com.cn:3336/meb_im?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useAffectedRows=true&useSSL=false
+    url: jdbc:mysql://localhost:3306/zhike_street?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useAffectedRows=true&useSSL=false
     username: root
-    password: nvfoFPR4hnQZfeGkCwBN
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource
-
-    druid:
-      initial-size: 20
-      min-idle: 20
-      max-active: 200
-      max-wait: 60000
-      time-between-eviction-runs-millis: 60000
-      min-evictable-idle-time-millis: 30000
-      validation-query: SELECT 1 FROM DUAL
-      test-while-idle: true
-      test-on-return: false
-      test-on-borrow: false
-      pool-prepared-statements: true
-      max-pool-prepared-statement-per-connection-size: -1
-      use-global-data-source-stat: true
-      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    password: zhikecore123
+  #    driver-class-name: com.mysql.cj.jdbc.Driver
+  #    type: com.alibaba.druid.pool.DruidDataSource
 
   redis:
     enabled: true
-    host: 52.83.220.237
-    #port: 6371
-    port: 6377
-    password: 2CoWeKafdweEz2Dz560L9
-    database: 2
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 0
     timeout: 10000
     connectionPoolSize: 15
     connectionMinimumIdleSize: 5
@@ -54,9 +37,17 @@ spring:
       max-file-size: 100MB
       max-request-size: 200MB
 
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    cache: false
+    mode: HTML5
+    enabled: true
+
 mybatis-plus:
   mapper-locations: classpath*:mapper/*.xml
-  type-enums-package: com.meb.im.common.enums
+  type-enums-package: com.zhike.blogbase.enums
   global-config:
     db-config:
       id-type: AUTO #默认自增
@@ -71,18 +62,19 @@ logging:
   level:
     root: ERROR
     org.springframework.web: ERROR
-    com.meb.im.client: INFO
-    com.meb.im.dao.mapper: INFO
+    com.zhike.blogadmin: INFO
+    com.zhike.blogdao.mapper: INFO
 
 upload:
   qiniu:
-    domain: "https://devcdn.meb.com"
-    access-key: "IAM-q9VIORhbVrcvpAMMJPHx6SHMEhpBPwtRTQZydrd_"
-    secret-key: "ekhRClMrGfT1ABfojMbaf3VrO7N8FeEc55G-j1u83Mjw"
-    bucket: "meb-dev"
+    domain: "公有空间域名"
+    access-key: "七牛云key"
+    secret-key: "七牛云skey"
+    publicBucket: "公有空间bucketName"
+    privateBucket: "私有空间bucketName"
     enableRecognition: true
     deleteSleepTime: 5
-    videoBucket: "meb-dev"
+    privateUrl: "私有空间域名"
 
 management:
   endpoints:

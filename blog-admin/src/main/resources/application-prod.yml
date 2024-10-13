@@ -1,0 +1,92 @@
+server:
+  port: 8081
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000        #最大并发数
+    max-connections: 20000   #接受和处理的最大连接数
+    acceptCount: 700         #可以放到处理队列中的请求数
+  max-http-header-size: 64KB
+spring:
+  application:
+    name: blog-admin
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    mapper:
+      ACCEPT_CASE_INSENSITIVE_ENUMS: true
+      accept-case-insensitive-properties: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/zhike_street?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useAffectedRows=true&useSSL=false
+    username: root
+    password: zhikecore123
+  #    driver-class-name: com.mysql.cj.jdbc.Driver
+  #    type: com.alibaba.druid.pool.DruidDataSource
+
+  redis:
+    enabled: true
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 0
+    timeout: 10000
+    connectionPoolSize: 15
+    connectionMinimumIdleSize: 5
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 200MB
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    cache: false
+    mode: HTML5
+    enabled: true
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  type-enums-package: com.zhike.blogbase.enums
+  global-config:
+    db-config:
+      id-type: AUTO #默认自增
+  configuration:
+    mapUnderscoreToCamelCase: false
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  level:
+    root: ERROR
+    org.springframework.web: ERROR
+    com.zhike.blogadmin: INFO
+    com.zhike.blogdao.mapper: INFO
+
+upload:
+  qiniu:
+    domain: "公有空间域名"
+    access-key: "七牛云key"
+    secret-key: "七牛云skey"
+    publicBucket: "公有空间bucketName"
+    privateBucket: "私有空间bucketName"
+    enableRecognition: true
+    deleteSleepTime: 5
+    privateUrl: "私有空间域名"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #暴露所有节点
+      base-path: /
+    health:
+      sensitive: false #关闭过滤敏感信息
+  endpoint:
+    health:
+      show-details: always  #显示详细信息
+  health:
+    mail:
+      enabled: false

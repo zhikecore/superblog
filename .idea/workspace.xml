@@ -10,10 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ae31778-6eaa-495d-acee-85c1070b8d45" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/java/com/zhike/blogadmin/config/RedissonConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/com/zhike/blogadmin/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/com/zhike/blogadmin/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-base/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/resources/application-local.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/resources/application-local.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/resources/application-pre.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/resources/application-pre.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/resources/application-prod.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,20 +282,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/projects/java/superblog/blog-admin/src/main/resources/templates/article&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/projects/java/superblog/blog-admin/src/main/resources/templates/article",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "build.tools"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.zhike.blogwebapi.Models" />
@@ -315,7 +315,7 @@
       <recent name="E:\JavaProjects\superblog\blog-webapp\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BlogWebAdminApplication">
+  <component name="RunManager" selected="Application.BlogWebapiApplication">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -454,9 +454,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BlogWebapiApplication" />
         <item itemvalue="Application.BlogWebAdminApplication" />
         <item itemvalue="Application.BlogWebappApplication" />
-        <item itemvalue="Application.BlogWebapiApplication" />
         <item itemvalue="JUnit.BlogWebapiApplicationTests" />
         <item itemvalue="JUnit.BlogWebapiApplicationTests.testReflectFactory" />
       </list>
